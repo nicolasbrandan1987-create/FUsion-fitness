@@ -833,13 +833,13 @@ Reglas estrictas:
 Solo el mensaje, sin explicaciones.`;
 
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages',{
+    const r = await fetch('https://script.google.com/macros/s/AKfycbwyyGjo3kLTiMYlK2VUZcRh-q4pwWf8bptwaHkvUbF8pMtdQVnz32tw_rc492hZi86L/exec',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,messages:[{role:'user',content:prompt}]})
+      headers:{'Content-Type':'text/plain'},
+      body:JSON.stringify({prompt})
     });
     const d = await r.json();
-    msgActual = d.content?.[0]?.text || 'No se pudo generar el mensaje.';
+    msgActual = d.texto || 'No se pudo generar el mensaje.';
     const waLink = `https://wa.me/549${telActual.replace(/\D/g,'')}?text=${encodeURIComponent(msgActual)}`;
 
     ia.innerHTML = `
@@ -1187,13 +1187,13 @@ Reglas:
 Solo el mensaje, sin explicaciones.`;
 
     try {
-      const r = await fetch('https://api.anthropic.com/v1/messages',{
+      const r = await fetch('https://script.google.com/macros/s/AKfycbwyyGjo3kLTiMYlK2VUZcRh-q4pwWf8bptwaHkvUbF8pMtdQVnz32tw_rc492hZi86L/exec',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:280,messages:[{role:'user',content:prompt}]})
+        headers:{'Content-Type':'text/plain'},
+        body:JSON.stringify({prompt})
       });
       const d = await r.json();
-      const msg = d.content?.[0]?.text || 'Error al generar.';
+      const msg = d.texto || 'Error al generar.';
       const waLink = `https://wa.me/549${s.t.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`;
 
       const el = document.getElementById(itemId);
