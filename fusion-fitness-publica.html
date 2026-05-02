@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fusión Fitness · Unite al gym</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090f;
+  --surface:#0d1117;
+  --border:rgba(255,255,255,.09);
+  --green:#00e676;
+  --green-dim:rgba(0,230,118,.1);
+  --green-glow:rgba(0,230,118,.25);
+  --white:#eef4ee;
+  --muted:#6b7f6b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);color:var(--white);
+  min-height:100vh;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0,230,118,.08), transparent 60%);
+}
+.wrap{max-width:480px;margin:0 auto;padding:24px 16px 48px}
+
+/* HERO */
+.hero{text-align:center;padding:32px 0 28px}
+.logo{
+  width:72px;height:72px;border-radius:22px;
+  background:linear-gradient(145deg,#00e676,#00a854);
+  display:grid;place-items:center;margin:0 auto 16px;
+  font-family:'Bebas Neue',sans-serif;font-size:30px;color:#020f06;
+  box-shadow:0 0 40px var(--green-glow),0 0 0 1px rgba(0,230,118,.25);
+}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:.5px;line-height:1}
+.hero h1 span{color:var(--green)}
+.hero p{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.5}
+
+/* PILLS INFO */
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0 28px}
+.pill{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.05);border:1px solid var(--border);
+  padding:7px 14px;border-radius:999px;font-size:13px;
+}
+.pill span{font-size:16px}
+
+/* CARD FORM */
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:24px;padding:28px;
+}
+.card-title{
+  font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.5px;
+  margin-bottom:6px;
+}
+.card-sub{font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.5}
+
+.form-grid{display:flex;flex-direction:column;gap:14px}
+.fg{display:flex;flex-direction:column;gap:7px}
+label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.4px;text-transform:uppercase}
+input,select,textarea{
+  background:rgba(255,255,255,.05);border:1px solid var(--border);
+  color:var(--white);border-radius:14px;padding:13px 16px;
+  font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:.2s;
+  -webkit-appearance:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:rgba(0,230,118,.4);background:rgba(0,230,118,.04);
+}
+input::placeholder{color:#3a4f3a}
+option{background:#0d1117}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%236b7f6b'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+
+.btn-submit{
+  width:100%;padding:16px;
+  background:linear-gradient(135deg,var(--green),#00a854);
+  color:#020f06;font-weight:800;font-size:17px;border:none;border-radius:16px;
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:.2s;margin-top:6px;
+  letter-spacing:.3px;
+}
+.btn-submit:hover{box-shadow:0 0 32px var(--green-glow);transform:translateY(-2px)}
+.btn-submit:active{transform:translateY(0)}
+
+/* ÉXITO */
+.success{
+  display:none;text-align:center;padding:32px 16px;
+  animation:fadeIn .5s ease;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.success-ico{font-size:64px;margin-bottom:16px}
+.success h2{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--green)}
+.success p{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.6}
+.success .wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--green);color:#020f06;
+  font-weight:800;font-size:15px;padding:14px 28px;
+  border-radius:16px;margin-top:24px;text-decoration:none;
+  transition:.2s;
+}
+.success .wa-btn:hover{box-shadow:0 0 24px var(--green-glow)}
+
+/* FOOTER */
+.footer{text-align:center;padding:28px 0 0;font-size:12px;color:var(--muted)}
+.footer a{color:var(--muted);text-decoration:none}
+.footer strong{color:rgba(255,255,255,.4)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="logo">FF</div>
+    <h1>Fusión<br><span>Fitness</span></h1>
+    <p>9 años transformando vidas en Río Gallegos.<br>Funcional · Musculación · Ritmos</p>
+  </div>
+
+  <div class="pills">
+    <div class="pill"><span>📍</span> Mendoza 45</div>
+    <div class="pill"><span>💪</span> Clase de prueba gratis</div>
+    <div class="pill"><span>⭐</span> +5.300 socios</div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="card" id="card-form">
+    <div class="card-title">Quiero conocer el gym</div>
+    <div class="card-sub">Completá tus datos y te contactamos en menos de 24hs para coordinar tu clase de prueba sin costo.</div>
+
+    <div class="form-grid">
+      <div class="fg">
+        <label>Nombre completo</label>
+        <input id="f-nombre" type="text" placeholder="Tu nombre y apellido" autocomplete="name">
+      </div>
+      <div class="fg">
+        <label>WhatsApp</label>
+        <input id="f-tel" type="tel" placeholder="Ej: 2966 123456" autocomplete="tel">
+      </div>
+      <div class="fg">
+        <label>¿Qué querés lograr?</label>
+        <select id="f-obj">
+          <option value="">Seleccioná tu objetivo</option>
+          <option>Bajar de peso</option>
+          <option>Ganar masa muscular</option>
+          <option>Mejorar mi salud</option>
+          <option>Empezar desde cero</option>
+          <option>Tonificar y sentirme mejor</option>
+          <option>Probar una disciplina nueva</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>¿Qué te interesa?</label>
+        <select id="f-srv">
+          <option value="">Elegí una actividad</option>
+          <option>Entrenamiento funcional</option>
+          <option>Musculación</option>
+          <option>Ritmos / Cardio</option>
+          <option>No sé, quiero que me orienten</option>
+          <option>Quiero ver los planes</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>¿Cuándo preferís entrenar?</label>
+        <select id="f-horario">
+          <option value="">Elegí un horario</option>
+          <option>Mañana (7–12hs)</option>
+          <option>Mediodía (12–15hs)</option>
+          <option>Tarde (15–19hs)</option>
+          <option>Noche (19–22hs)</option>
+          <option>Cualquier horario</option>
+        </select>
+      </div>
+      <button class="btn-submit" onclick="enviarForm()">Quiero mi clase de prueba →</button>
+    </div>
+  </div>
+
+  <!-- ÉXITO -->
+  <div class="success" id="success">
+    <div class="success-ico">🎉</div>
+    <h2>¡Nos vemos pronto!</h2>
+    <p>Recibimos tu consulta. En menos de 24 horas te contactamos por WhatsApp para coordinar tu primera clase.</p>
+    <a id="wa-link" class="wa-btn" href="#" target="_blank">
+      <svg style="width:20px;height:20px;fill:#020f06" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.122 1.523 5.86L.057 23.428c-.07.277.003.57.195.768A.92.92 0 001 24.5l6.224-1.629A11.923 11.923 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.001-1.37l-.358-.213-3.716.974.99-3.621-.233-.37A9.82 9.82 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.427-4.39 9.818-9.818 9.818z"/></svg>
+      Escribir por WhatsApp ahora
+    </a>
+  </div>
+
+  <div class="footer">
+    <strong>Fusión Fitness</strong> · Mendoza 45, Río Gallegos<br>
+    <a href="tel:+5492966591264">+54 9 2966 59-1264</a> · fusionfiness.rgl@gmail.com
+  </div>
+</div>
+
+<script>
+function enviarForm(){
+  const nombre  = document.getElementById('f-nombre').value.trim();
+  const tel     = document.getElementById('f-tel').value.trim();
+  const obj     = document.getElementById('f-obj').value;
+  const srv     = document.getElementById('f-srv').value;
+  const horario = document.getElementById('f-horario').value;
+
+  if(!nombre){ alert('Por favor ingresá tu nombre'); return; }
+  if(!tel){ alert('Por favor ingresá tu WhatsApp'); return; }
+
+  // En producción: enviar a Google Sheets vía Apps Script
+  // fetch('TU_APPS_SCRIPT_URL', { method:'POST', body: JSON.stringify({nombre,tel,obj,srv,horario,origen:'Web/QR',fecha:new Date().toLocaleDateString('es-AR')}) })
+
+  // Mensaje de bienvenida automático para el gym
+  const msg = encodeURIComponent(
+    `Hola ${nombre.split(' ')[0]}! 👋\n\nGracias por tu consulta en Fusión Fitness.\n\nRecibimos tu mensaje: te interesa ${srv||'conocer el gym'} para ${obj||'mejorar tu físico'}, preferís el horario de ${horario||'tarde'}.\n\nEn breve te coordinamos tu clase de prueba sin cargo. ¿Tenés alguna pregunta mientras tanto?\n\nEl equipo de Fusión Fitness 💪\nMendoza 45, Río Gallegos`
+  );
+
+  document.getElementById('card-form').style.display = 'none';
+  document.getElementById('success').style.display = 'block';
+  document.getElementById('wa-link').href = `https://wa.me/5492966591264?text=${msg}`;
+}
+</script>
+</body>
+</html>

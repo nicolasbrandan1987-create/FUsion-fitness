@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Manual de Uso · Fusión Fitness CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#00e676;--bg:#07090f;--surface:#0d1117;--border:rgba(255,255,255,.09);--white:#eef4ee;--muted:#6b7f6b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);line-height:1.6}
+.wrap{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+.cover{text-align:center;padding:40px 0 48px;border-bottom:1px solid var(--border);margin-bottom:40px}
+.logo{width:64px;height:64px;border-radius:18px;background:linear-gradient(145deg,#00e676,#00a854);display:grid;place-items:center;margin:0 auto 16px;font-family:'Bebas Neue',sans-serif;font-size:26px;color:#020f06;box-shadow:0 0 32px rgba(0,230,118,.25)}
+.cover h1{font-family:'Bebas Neue',sans-serif;font-size:46px;letter-spacing:.5px}
+.cover h1 span{color:var(--green)}
+.cover p{color:var(--muted);font-size:15px;margin-top:8px}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px;margin-bottom:40px}
+.toc h3{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--green);margin-bottom:12px;letter-spacing:.5px}
+.toc ol{padding-left:20px}
+.toc li{padding:5px 0;font-size:14px;color:var(--muted)}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--white)}
+.section{margin-bottom:48px}
+.section-num{
+  display:inline-block;background:var(--green);color:#020f06;
+  font-family:'Bebas Neue',sans-serif;font-size:13px;padding:3px 10px;
+  border-radius:999px;letter-spacing:.5px;margin-bottom:10px;
+}
+.section h2{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:.5px;margin-bottom:8px}
+.section p{font-size:15px;color:#b8d4b8;margin-bottom:12px}
+.step-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:16px 18px;margin-bottom:10px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.step-num{
+  width:32px;height:32px;border-radius:10px;background:var(--green);
+  display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;
+  font-size:16px;color:#020f06;flex-shrink:0;margin-top:2px;
+}
+.step-content h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.step-content p{font-size:13px;color:var(--muted);margin:0}
+.tip-box{
+  background:rgba(0,230,118,.07);border:1px solid rgba(0,230,118,.18);
+  border-radius:14px;padding:14px 16px;margin:16px 0;
+}
+.tip-box strong{color:var(--green);font-size:13px}
+.tip-box p{font-size:13px;color:#a8c8a8;margin:4px 0 0}
+.warn-box{
+  background:rgba(255,165,2,.07);border:1px solid rgba(255,165,2,.18);
+  border-radius:14px;padding:14px 16px;margin:16px 0;
+}
+.warn-box strong{color:#ffa502;font-size:13px}
+.warn-box p{font-size:13px;color:#c8a870;margin:4px 0 0}
+.checklist{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px}
+.check-item{
+  display:flex;align-items:flex-start;gap:12px;padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.check-item:last-child{border:none}
+.check-ico{font-size:18px;flex-shrink:0;margin-top:1px}
+.check-item p{font-size:14px;color:#b8d4b8}
+.check-item span{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+.divider{height:1px;background:var(--border);margin:40px 0}
+.footer-manual{text-align:center;font-size:13px;color:var(--muted);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="cover">
+  <div class="logo">FF</div>
+  <h1>Manual de <span>uso</span></h1>
+  <p>Fusión Fitness CRM · Guía para Mónica</p>
+</div>
+
+<div class="toc">
+  <h3>Contenido</h3>
+  <ol>
+    <li><a href="#s1">¿Qué es este sistema?</a></li>
+    <li><a href="#s2">Cómo usar el panel diario</a></li>
+    <li><a href="#s3">Cómo captar leads desde Instagram</a></li>
+    <li><a href="#s4">Cómo enviar un mensaje con IA</a></li>
+    <li><a href="#s5">Cómo generar reportes</a></li>
+    <li><a href="#s6">Qué revisar cada semana</a></li>
+    <li><a href="#s7">Qué revisar cada mes</a></li>
+    <li><a href="#s8">Preguntas frecuentes</a></li>
+  </ol>
+</div>
+
+<!-- SECCIÓN 1 -->
+<div class="section" id="s1">
+  <div class="section-num">01</div>
+  <h2>¿Qué es este sistema?</h2>
+  <p>Es tu panel comercial digital. Te permite ver en un solo lugar quiénes son tus socios, quién tiene la cuota por vencer, quién cumple años, quién dejó de venir, y los nuevos interesados que llegan desde Instagram o WhatsApp.</p>
+  <p>Además tiene un asistente de inteligencia artificial que genera mensajes personalizados para cada socio con un solo toque — listos para enviar por WhatsApp.</p>
+  <div class="tip-box">
+    <strong>💡 La idea clave</strong>
+    <p>No reemplaza tu WhatsApp. Lo complementa: el sistema detecta a quién tenés que contactar hoy, y te da el mensaje listo. Vos solo lo enviás.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 2 -->
+<div class="section" id="s2">
+  <div class="section-num">02</div>
+  <h2>Cómo usar el panel diario</h2>
+  <p>Abrís el link del panel desde tu celular. La primera pantalla que ves es <strong>Acciones del día</strong>.</p>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content"><h4>Mirá los 4 números arriba</h4><p>Te muestran cumpleaños hoy, cuotas por vencer, cuotas vencidas y socios que no vienen hace 14 días.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content"><h4>Tocá el número que querés atender</h4><p>La tabla de abajo se filtra automáticamente y muestra solo esos socios.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">3</div>
+    <div class="step-content"><h4>Tocá "WhatsApp" en el socio</h4><p>El asistente genera el mensaje en segundos. Luego tocás "Abrir WhatsApp" y se abre la conversación con el mensaje ya escrito.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">4</div>
+    <div class="step-content"><h4>Enviás el mensaje</h4><p>Podés editarlo antes si querés cambiar algo. Luego simplemente enviás.</p></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 3 -->
+<div class="section" id="s3">
+  <div class="section-num">03</div>
+  <h2>Cómo captar leads desde Instagram</h2>
+  <p>Tenés una página pública (la "mini app") pensada para que la pongas en tu bio de Instagram o en un QR en la entrada del gym.</p>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content"><h4>Poné el link en tu bio de Instagram</h4><p>Editá tu perfil → Sitio web → pegá el link de la página pública. Cambiá la descripción de tu bio a: "👇 Pedí tu clase de prueba gratis".</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content"><h4>El interesado completa el formulario</h4><p>Nombre, WhatsApp, objetivo y actividad de interés. Tarda menos de 1 minuto.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">3</div>
+    <div class="step-content"><h4>Aparece en tu panel como "Nuevo interesado"</h4><p>Lo ves en la pestaña Interesados. Tocás WhatsApp y el asistente te genera el primer mensaje de contacto.</p></div>
+  </div>
+  <div class="tip-box">
+    <strong>💡 También podés agregar leads manualmente</strong>
+    <p>Cuando alguien para en la puerta o te escribe por Instagram, vas a la pestaña "+ Nuevo lead" y lo cargás en 30 segundos.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 4 -->
+<div class="section" id="s4">
+  <div class="section-num">04</div>
+  <h2>Cómo enviar un mensaje con IA</h2>
+  <p>Esta es la función más importante del sistema. En lugar de escribir el mismo mensaje para cada socio, la IA lo genera personalizado.</p>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content"><h4>Buscás al socio en la tabla</h4><p>En Acciones del día o en la pestaña Socios.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content"><h4>Tocás el botón verde "WhatsApp"</h4><p>El panel de la derecha muestra "Generando mensaje…" por unos segundos.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">3</div>
+    <div class="step-content"><h4>Leés el mensaje generado</h4><p>La IA lo personaliza con el nombre del socio, su plan y el motivo (cumpleaños, cuota vencida, etc.).</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">4</div>
+    <div class="step-content"><h4>Tocás "Abrir WhatsApp"</h4><p>Se abre WhatsApp con el número del socio y el mensaje ya escrito. Solo tocás Enviar.</p></div>
+  </div>
+  <div class="warn-box">
+    <strong>⚠️ Recordá siempre leer el mensaje antes de enviar</strong>
+    <p>La IA genera textos muy buenos pero vos conocés a tus socios. Si querés personalizar algo, editalo antes de enviar.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 5 -->
+<div class="section" id="s5">
+  <div class="section-num">05</div>
+  <h2>Cómo generar reportes</h2>
+  <p>En la pestaña Socios encontrás dos botones de reporte arriba a la derecha.</p>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content"><h4>Reporte de cumpleaños</h4><p>Te muestra todos los socios que cumplen años este mes, con su plan y teléfono. Podés copiarlo o enviarlo por WhatsApp.</p></div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content"><h4>Reporte de vencimientos</h4><p>Te muestra quién vence esta semana y quién ya venció, con un resumen ejecutivo de la situación.</p></div>
+  </div>
+  <div class="tip-box">
+    <strong>💡 Usá los reportes los lunes</strong>
+    <p>Cada lunes abrís el reporte de vencimientos y el de cumpleaños de la semana. Sabés exactamente a quién contactar antes de que se vaya.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 6 -->
+<div class="section" id="s6">
+  <div class="section-num">06</div>
+  <h2>Qué revisar cada semana</h2>
+  <div class="checklist">
+    <div class="check-item">
+      <div class="check-ico">📅</div>
+      <div><p><strong>Lunes: Reporte de vencimientos</strong></p><span>Contactar a los que vencen esta semana antes del miércoles.</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">🎂</div>
+      <div><p><strong>Cada día: Cumpleaños de hoy</strong></p><span>El número verde arriba a la izquierda. Si hay alguien, contactarlo ese mismo día.</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">⚡</div>
+      <div><p><strong>Miércoles: Leads sin respuesta</strong></p><span>Entrar a la pestaña Interesados y ver si hay alguien en estado "Nuevo" hace más de 2 días.</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">💤</div>
+      <div><p><strong>Viernes: Socios inactivos</strong></p><span>Revisar el número naranja. Contactar a los que no vienen hace más de 14 días.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 7 -->
+<div class="section" id="s7">
+  <div class="section-num">07</div>
+  <h2>Qué revisar cada mes</h2>
+  <div class="checklist">
+    <div class="check-item">
+      <div class="check-ico">📊</div>
+      <div><p><strong>Pestaña Reportes: ver gráfico de socios activos</strong></p><span>¿Está creciendo o bajando? ¿En qué mes hubo picos?</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">🥧</div>
+      <div><p><strong>Distribución por plan</strong></p><span>¿Qué plan tiene más socios? ¿Hay planes que no se venden?</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">📥</div>
+      <div><p><strong>¿De dónde vienen los leads?</strong></p><span>Si el 80% viene de Instagram, vale la pena seguir posteando. Si viene de recomendaciones, potenciá eso.</span></div>
+    </div>
+    <div class="check-item">
+      <div class="check-ico">🎂</div>
+      <div><p><strong>Reporte de cumpleaños del mes</strong></p><span>Generalo el primer lunes del mes. Planificá los mensajes de toda la semana de golpe.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SECCIÓN 8 -->
+<div class="section" id="s8">
+  <div class="section-num">08</div>
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="step-card">
+    <div class="step-num">?</div>
+    <div class="step-content">
+      <h4>¿Necesito internet para usarlo?</h4>
+      <p>Sí. Especialmente para generar mensajes con IA. La parte de ver socios funciona sin internet si ya cargaste la página.</p>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">?</div>
+    <div class="step-content">
+      <h4>¿Puedo usarlo desde el celular?</h4>
+      <p>Sí, está diseñado para celular. Solo abrís el link en el navegador de tu teléfono. No necesitás instalar nada.</p>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">?</div>
+    <div class="step-content">
+      <h4>¿Qué pasa si el mensaje de la IA no me gusta?</h4>
+      <p>Podés editarlo en WhatsApp antes de enviarlo. O tocás de nuevo el botón WhatsApp para generar uno diferente.</p>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">?</div>
+    <div class="step-content">
+      <h4>¿Puedo cambiar los datos de los socios?</h4>
+      <p>Por ahora los datos se actualizan desde la planilla de base. En la próxima versión podrás editarlos directamente desde el panel.</p>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">?</div>
+    <div class="step-content">
+      <h4>¿Cuánto tiempo me lleva usarlo por día?</h4>
+      <p>Unos 10 minutos por día son suficientes. La idea es que lo abrás con el café de la mañana, veas las alertas, y contactes a 2 o 3 personas.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer-manual">
+  <strong style="color:rgba(255,255,255,.4)">Fusión Fitness CRM</strong> · Mendoza 45, Río Gallegos<br>
+  Ante cualquier duda, contactá a tu soporte técnico.
+</div>
+
+</div>
+</body>
+</html>
