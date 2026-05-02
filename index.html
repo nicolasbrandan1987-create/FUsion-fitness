@@ -397,6 +397,7 @@ textarea{min-height:80px;resize:vertical}
   <button class="tab"     onclick="tab('campanas')">🎯 Campañas</button>
   <button class="tab"     onclick="tab('graficos')">📈 Reportes</button>
   <button class="tab"     onclick="tab('nuevo')">＋ Nuevo lead</button>
+  <button class="tab"     onclick="tab('nuevo-socio')">＋ Nuevo socio</button>
 </div>
 
 <!-- ══════════════════ INICIO ══════════════════ -->
@@ -623,7 +624,7 @@ textarea{min-height:80px;resize:vertical}
         <label>Actividad de interés</label>
         <select id="nl-srv">
           <option value="">Seleccionar</option>
-          <option>Entrenamiento funcional</option><option>Musculación</option>
+          <option>Entrenamiento funcional</option><option>Ritmos</option>
           <option>Ritmos</option><option>Clase de prueba</option><option>Plan completo</option>
         </select>
       </div>
@@ -640,6 +641,34 @@ textarea{min-height:80px;resize:vertical}
     </div>
   </div>
 </div>
+
+<!-- ══════════════════ NUEVO SOCIO ══════════════════ -->
+<div id="sec-nuevo-socio" class="sec">
+  <div class="form-card" style="max-width:600px">
+    <div class="form-title">Registrar nuevo socio</div>
+    <div class="form-grid">
+      <div class="fg"><label>Nombre completo</label><input id="ns-nombre" placeholder="Ej: Laura Rodríguez"></div>
+      <div class="fg"><label>WhatsApp</label><input id="ns-tel" placeholder="Ej: 2966 554321"></div>
+      <div class="fg"><label>Fecha de nacimiento</label><input type="date" id="ns-cumple"></div>
+      <div class="fg">
+        <label>Plan</label>
+        <select id="ns-plan">
+          <option value="">Seleccionar</option>
+          <option>Funcional Full</option>
+          <option>Funcional</option>
+          <option>Ritmos</option>
+          <option>Plan Completo</option>
+          <option>Personalizado</option>
+        </select>
+      </div>
+      <div class="fg"><label>Fecha de vencimiento</label><input type="date" id="ns-vence"></div>
+      <div class="fg"><label>Última visita</label><input type="date" id="ns-visita"></div>
+      <div class="fg full"><label>Observación</label><textarea id="ns-obs" placeholder="Preferencias, objetivos, notas..."></textarea></div>
+      <div class="fg full"><button class="btn-primary" onclick="guardarSocio()">✓ Registrar socio</button></div>
+    </div>
+  </div>
+</div>
+
 
 </div><!-- /wrap -->
 
@@ -675,19 +704,19 @@ function hoyMD(d){
 
 const SOCIOS = [
   {n:'Valentina Molina', t:'2966541111', b:'01/05', plan:'Funcional Full', vence:'08/05/2026', visita:'29/04/2026', est:'vencer'},
-  {n:'Rodrigo Páez',     t:'2966541222', b:'01/05', plan:'Musculación',    vence:'12/05/2026', visita:'30/04/2026', est:'activo'},
+  {n:'Rodrigo Páez',     t:'2966541222', b:'01/05', plan:'Funcional',      vence:'12/05/2026', visita:'30/04/2026', est:'activo'},
   {n:'Sofía Herrera',    t:'2966541333', b:'14/06', plan:'Ritmos',         vence:'25/04/2026', visita:'14/04/2026', est:'vencido'},
   {n:'Mateo Álvarez',    t:'2966541444', b:'22/07', plan:'Funcional Full', vence:'30/05/2026', visita:'11/04/2026', est:'inactivo'},
   {n:'Luciana Torres',   t:'2966541555', b:'08/05', plan:'Plan Completo',  vence:'05/05/2026', visita:'28/04/2026', est:'vencer'},
-  {n:'Diego Moreno',     t:'2966541666', b:'30/09', plan:'Musculación',    vence:'02/05/2026', visita:'27/04/2026', est:'vencer'},
+  {n:'Diego Moreno',     t:'2966541666', b:'30/09', plan:'Funcional Full', vence:'02/05/2026', visita:'27/04/2026', est:'vencer'},
   {n:'Carla Sánchez',    t:'2966541777', b:'17/11', plan:'Ritmos',         vence:'20/04/2026', visita:'09/04/2026', est:'vencido'},
   {n:'Ezequiel Ruiz',    t:'2966541888', b:'05/03', plan:'Funcional',      vence:'28/04/2026', visita:'06/04/2026', est:'vencido'},
   {n:'Natalia Ríos',     t:'2966541999', b:'23/08', plan:'Plan Completo',  vence:'15/06/2026', visita:'13/04/2026', est:'inactivo'},
-  {n:'Facundo López',    t:'2966542000', b:'11/12', plan:'Musculación',    vence:'20/06/2026', visita:'28/04/2026', est:'activo'},
+  {n:'Facundo López',    t:'2966542000', b:'11/12', plan:'Plan Completo',  vence:'20/06/2026', visita:'28/04/2026', est:'activo'},
   {n:'Romina Castro',    t:'2966542111', b:'02/05', plan:'Ritmos',         vence:'10/06/2026', visita:'10/04/2026', est:'inactivo'},
   {n:'Tomás Vega',       t:'2966542222', b:'29/06', plan:'Funcional Full', vence:'18/05/2026', visita:'29/04/2026', est:'activo'},
   {n:'Paula Méndez',     t:'2966542333', b:'07/05', plan:'Plan Completo',  vence:'07/05/2026', visita:'26/04/2026', est:'vencer'},
-  {n:'Agustín Pérez',    t:'2966542444', b:'14/09', plan:'Musculación',    vence:'01/04/2026', visita:'01/04/2026', est:'inactivo'},
+  {n:'Agustín Pérez',    t:'2966542444', b:'14/09', plan:'Funcional',      vence:'01/04/2026', visita:'01/04/2026', est:'inactivo'},
   {n:'Florencia Núñez',  t:'2966542555', b:'25/10', plan:'Ritmos',         vence:'25/05/2026', visita:'30/04/2026', est:'activo'},
 ];
 
@@ -695,7 +724,7 @@ const LEADS = [
   {f:'30/04/2026', n:'Julieta Arce',    t:'2966551001', int:'Ritmos',        ori:'Instagram',     est:'nuevo'},
   {f:'30/04/2026', n:'Marcos Ibáñez',   t:'2966551002', int:'Funcional',     ori:'QR físico',     est:'contactado'},
   {f:'29/04/2026', n:'Camila Suárez',   t:'2966551003', int:'Clase prueba',  ori:'Recomendación', est:'agendado'},
-  {f:'28/04/2026', n:'Bruno Leiva',     t:'2966551004', int:'Musculación',   ori:'Instagram',     est:'vendido'},
+  {f:'28/04/2026', n:'Bruno Leiva',     t:'2966551004', int:'Funcional',     ori:'Instagram',     est:'vendido'},
   {f:'27/04/2026', n:'Antonella Díaz',  t:'2966551005', int:'Plan Completo', ori:'WhatsApp',      est:'perdido'},
   {f:'26/04/2026', n:'Santiago Ortega', t:'2966551006', int:'Funcional',     ori:'Instagram',     est:'nuevo'},
 ];
@@ -835,10 +864,11 @@ Solo el mensaje, sin explicaciones.`;
   try {
     const r = await fetch('https://script.google.com/macros/s/AKfycbwyyGjo3kLTiMYlK2VUZcRh-q4pwWf8bptwaHkvUbF8pMtdQVnz32tw_rc492hZi86L/exec',{
       method:'POST',
-      headers:{'Content-Type':'text/plain'},
-      body:JSON.stringify({prompt})
+      body:JSON.stringify({prompt}),
+      redirect:'follow'
     });
-    const d = await r.json();
+    const txt = await r.text();
+    const d = JSON.parse(txt);
     msgActual = d.texto || 'No se pudo generar el mensaje.';
     const waLink = `https://wa.me/549${telActual.replace(/\D/g,'')}?text=${encodeURIComponent(msgActual)}`;
 
@@ -983,7 +1013,7 @@ function initCharts(){
   new Chart(document.getElementById('ch-planes'),{
     type:'doughnut',
     data:{
-      labels:['Funcional Full','Musculación','Ritmos','Plan Completo','Funcional'],
+      labels:['Funcional Full','Plan Completo','Ritmos','Funcional','Personalizado'],
       datasets:[{
         data:[4,4,4,2,1],
         backgroundColor:['#00e676','#2ed9ff','#ffa502','#b388ff','#ff6b35'],
@@ -1082,6 +1112,50 @@ document.getElementById('fecha-pill').textContent =
   `${d.getDate()} ${MESES[d.getMonth()]} ${d.getFullYear()}`;
 
 renderAcciones(null);
+
+
+// NUEVO SOCIO
+function guardarSocio(){
+  const nombre = document.getElementById('ns-nombre').value.trim();
+  const tel    = document.getElementById('ns-tel').value.trim();
+  const plan   = document.getElementById('ns-plan').value;
+  const vence  = document.getElementById('ns-vence').value;
+  const visita = document.getElementById('ns-visita').value;
+  const cumple = document.getElementById('ns-cumple').value;
+
+  if(!nombre||!tel){ alert('Completá nombre y WhatsApp'); return; }
+
+  const fmtDate = (d) => {
+    if(!d) return '--/--/----';
+    const [y,m,dd] = d.split('-');
+    return dd+'/'+m+'/'+y;
+  };
+  const fmtCumple = (d) => {
+    if(!d) return '01/01';
+    const [y,m,dd] = d.split('-');
+    return dd+'/'+m;
+  };
+
+  SOCIOS.unshift({
+    n: nombre, t: tel,
+    b: fmtCumple(cumple),
+    plan: plan || 'Sin plan',
+    vence: fmtDate(vence),
+    visita: fmtDate(visita) !== '--/--/----' ? fmtDate(visita) : fmtDate(new Date().toISOString().split('T')[0]),
+    est: 'activo',
+    obs: document.getElementById('ns-obs').value
+  });
+
+  // Update counters
+  document.getElementById('st-total').textContent = SOCIOS.length;
+  document.getElementById('st-activos').textContent = SOCIOS.filter(s=>s.est==='activo').length;
+
+  ['ns-nombre','ns-tel','ns-obs','ns-cumple','ns-vence','ns-visita'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ns-plan').selectedIndex=0;
+
+  alert('✓ '+nombre+' registrado como socio activo');
+  tab('socios');
+}
 
 // ══════════════════════════════════════════════
 // CAMPAÑAS
@@ -1189,10 +1263,11 @@ Solo el mensaje, sin explicaciones.`;
     try {
       const r = await fetch('https://script.google.com/macros/s/AKfycbwyyGjo3kLTiMYlK2VUZcRh-q4pwWf8bptwaHkvUbF8pMtdQVnz32tw_rc492hZi86L/exec',{
         method:'POST',
-        headers:{'Content-Type':'text/plain'},
-        body:JSON.stringify({prompt})
+        body:JSON.stringify({prompt}),
+        redirect:'follow'
       });
-      const d = await r.json();
+      const txt = await r.text();
+      const d = JSON.parse(txt);
       const msg = d.texto || 'Error al generar.';
       const waLink = `https://wa.me/549${s.t.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`;
 
