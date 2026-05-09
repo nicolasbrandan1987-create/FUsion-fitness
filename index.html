@@ -20,7 +20,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;min-height:100vh;overflow-x:hidden}
 
-/* HEADER */
 .hdr{position:fixed;top:0;left:0;right:0;height:var(--hdh);background:rgba(7,9,11,.96);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 14px;z-index:100;backdrop-filter:blur(16px);gap:10px}
 .hdr-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;letter-spacing:-.5px;flex-shrink:0}
 .hdr-logo em{color:var(--green);font-style:normal}
@@ -28,7 +27,6 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:bl 2s ease-in-out infinite}
 @keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* GLOBAL SEARCH BAR IN HEADER */
 .gsrch-wrap{flex:1;position:relative}
 .gsrch{width:100%;background:var(--bg3);border:1px solid var(--bdr);border-radius:8px;color:var(--txt);font-family:'Barlow',sans-serif;font-size:13px;padding:8px 12px 8px 32px;outline:none;transition:border-color .15s}
 .gsrch:focus{border-color:var(--green)}
@@ -37,28 +35,23 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .gsrch-results.on{display:block}
 .gres-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--bdr);cursor:pointer}
 .gres-item:last-child{border-bottom:none}
-.gres-item:active{background:var(--bg3)}
 .gres-type{font-size:9px;font-family:'Space Mono',monospace;font-weight:700;padding:2px 6px;border-radius:4px;flex-shrink:0}
 .gres-type.s{background:var(--gdim);color:var(--green);border:1px solid var(--gbrd)}
 .gres-type.l{background:var(--bdim);color:var(--blue);border:1px solid var(--bbrd)}
 .gres-name{font-weight:600;font-size:13px;flex:1}
 .gres-sub{font-size:11px;color:var(--mut)}
 
-/* BOTTOM NAV */
 .bnav{position:fixed;bottom:0;left:0;right:0;height:var(--navh);background:var(--bg2);border-top:1px solid var(--bdr);display:grid;grid-template-columns:repeat(5,1fr);z-index:100}
 .ntab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;color:var(--dim);font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;background:none;border:none;padding:0;transition:color .15s}
 .ntab .ico{font-size:20px;line-height:1}
 .ntab.on{color:var(--green)}.ntab.on .ico{filter:drop-shadow(0 0 5px var(--green))}
 
-/* MAIN */
 .main{padding-top:calc(var(--hdh)+14px);padding-bottom:calc(var(--navh)+20px);padding-left:15px;padding-right:15px}
 .page{display:none}.page.on{display:block}
 
-/* TYPE */
 .ptitle{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;letter-spacing:-1px;line-height:1;margin-bottom:16px}
 .ptitle em{color:var(--green);font-style:normal}
 
-/* KPI */
 .kgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
 .kgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
 .kpi{background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:15px 14px}
@@ -72,7 +65,6 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .kpi.g .knum{color:var(--green)}.kpi.o .knum{color:var(--org)}.kpi.r .knum{color:var(--red)}.kpi.b .knum{color:var(--blue)}
 .ksub{font-size:10px;color:var(--dim);margin-top:2px;font-family:'Space Mono',monospace}
 
-/* CARD */
 .card{background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;margin-bottom:12px}
 .chead{display:flex;align-items:center;justify-content:space-between;padding:13px 16px 10px;border-bottom:1px solid var(--bdr)}
 .ctitle{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
@@ -83,7 +75,6 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .pill.r{border-color:var(--rbrd);color:var(--red);background:var(--rdim)}
 .pill.b{border-color:var(--bbrd);color:var(--blue);background:var(--bdim)}
 
-/* ACTIONS */
 .aitem{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer}
 .aitem:last-child{border-bottom:none}
 .adot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
@@ -93,24 +84,20 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .aname{flex:1;font-weight:600;font-size:13px}
 .amet{font-size:10px;color:var(--mut);font-family:'Space Mono',monospace}
 
-/* BUTTONS */
 .wabtn{background:none;border:1px solid var(--gbrd);color:var(--green);font-size:10px;padding:5px 9px;border-radius:6px;cursor:pointer;font-family:'Space Mono',monospace;white-space:nowrap;flex-shrink:0}
-.wabtn:active{background:var(--gdim)}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:var(--green);color:#000;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;letter-spacing:1px;text-transform:uppercase;border:none;border-radius:10px;cursor:pointer;transition:all .2s;margin-top:4px}
-.btn:active{transform:scale(.98);background:#00ffaa}
+.btn:active{transform:scale(.98)}
+.btn.wa{background:#25D366;color:#fff}
 .btn2{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;background:none;color:var(--org);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--obrd);border-radius:10px;cursor:pointer}
-.btn2:active{background:var(--odim)}
 .rbtn{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid var(--bdr);background:none;color:var(--mut)}
 .rbtn.g{border-color:var(--gbrd);color:var(--green)}.rbtn.o{border-color:var(--obrd);color:var(--org)}.rbtn.b{border-color:var(--bbrd);color:var(--blue)}
 
-/* FAB */
 .fabg{position:fixed;right:16px;bottom:calc(var(--navh)+14px);display:flex;flex-direction:column;gap:8px;z-index:90}
 .fab{display:flex;align-items:center;gap:7px;padding:11px 15px;border-radius:10px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:.5px;text-transform:uppercase;box-shadow:0 4px 20px rgba(0,0,0,.5)}
 .fab.g{background:var(--green);color:#000}
 .fab.o{background:var(--bg2);color:var(--org);border:1px solid var(--obrd)}
 .fab:active{transform:scale(.96)}
 
-/* MODAL */
 .mbg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:200;align-items:flex-end;backdrop-filter:blur(6px)}
 .mbg.on{display:flex}
 .modal{background:var(--bg2);border:1px solid var(--gbrd);border-radius:20px 20px 0 0;width:100%;max-height:92vh;overflow-y:auto;padding:22px 18px 40px;animation:su .25s cubic-bezier(.23,1,.32,1)}
@@ -119,53 +106,47 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .mtitle{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:18px}
 .mtitle em{color:var(--green);font-style:normal}
 
-/* FORM */
 .fg{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
 .flbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut)}
 .fi,.fsel,.fta{background:var(--bg3);border:1px solid var(--bdr);border-radius:9px;color:var(--txt);font-family:'Barlow',sans-serif;font-size:15px;padding:12px 14px;outline:none;width:100%;transition:border-color .15s;-webkit-appearance:none}
-.fi:focus,.fsel:focus,.fta:focus{border-color:var(--green);box-shadow:0 0 0 2px rgba(0,255,136,.08)}
+.fi:focus,.fsel:focus,.fta:focus{border-color:var(--green)}
 .fsel option{background:var(--bg2)}
 .fta{resize:vertical;min-height:80px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
-/* METRICS */
 .mrow{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .mrow:last-child{border-bottom:none}
 .mlbl{font-size:13px;color:var(--mut)}
 .mval{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px}
 .mval.g{color:var(--green)}.mval.o{color:var(--org)}.mval.b{color:var(--blue)}
 
-/* CHART */
-.chwrap{display:flex;align-items:flex-end;gap:4px;height:100px;padding-top:8px}
-.chcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
-.chbar{width:100%;border-radius:3px 3px 0 0;min-height:4px;background:linear-gradient(180deg,var(--green),rgba(0,255,136,.15))}
-.chbar.o{background:linear-gradient(180deg,var(--org),rgba(255,107,43,.15))}
-.chlbl{font-size:8px;color:var(--dim);font-family:'Space Mono',monospace}
+/* CHART MEJORADO */
+.chwrap{display:flex;align-items:flex-end;gap:6px;height:120px;padding-top:8px}
+.chcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.chbar{width:100%;border-radius:4px 4px 0 0;min-height:4px;background:linear-gradient(180deg,var(--green),rgba(0,255,136,.2));position:relative}
+.chbar.o{background:linear-gradient(180deg,var(--org),rgba(255,107,43,.2))}
+.chval{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:8px;color:var(--green);white-space:nowrap}
+.chval.o{color:var(--org)}
+.chlbl{font-size:9px;color:var(--mut);font-family:'Space Mono',monospace}
 
-/* BADGE */
 .bdg{display:inline-flex;align-items:center;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:4px;font-family:'Space Mono',monospace;text-transform:uppercase}
 .bdg.g{background:var(--gdim);color:var(--green);border:1px solid var(--gbrd)}
 .bdg.o{background:var(--odim);color:var(--org);border:1px solid var(--obrd)}
 .bdg.r{background:var(--rdim);color:var(--red);border:1px solid var(--rbrd)}
 .bdg.b{background:var(--bdim);color:var(--blue);border:1px solid var(--bbrd)}
-.bdg.p{background:var(--pdim);color:var(--pur);border:1px solid rgba(168,85,247,.25)}
 
-/* SEARCH PAGE */
 .srch{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--bdr);border-radius:10px;padding:10px 14px;margin-bottom:12px}
 .srch input{flex:1;background:none;border:none;outline:none;color:var(--txt);font-size:14px;font-family:'Barlow',sans-serif}
 .srch input::placeholder{color:var(--dim)}
 
-/* AI */
 .aibox{background:var(--bg3);border:1px solid var(--bdr);border-radius:10px;padding:14px;font-size:13px;line-height:1.7;color:var(--txt);white-space:pre-wrap;min-height:80px}
 .hint{color:var(--dim);font-size:12px;font-style:italic}
 
-/* PROGRESS */
 .pt{height:4px;background:var(--bg3);border-radius:2px;margin-top:6px;overflow:hidden}
 .pf{height:100%;border-radius:2px;background:var(--green);transition:width 1s}
 .conv-bar{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-bottom:4px}
 .conv-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--green));transition:width 1s}
 
-/* PIPELINE */
 .funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:14px}
 .fstep{background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:10px 5px;text-align:center;cursor:pointer;transition:all .15s}
 .fstep.af{border-color:var(--green);background:var(--gdim)}
@@ -173,19 +154,16 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .flbl2{font-size:8px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);margin-top:3px}
 .fstep.e0 .fnum{color:var(--blue)}.fstep.e1 .fnum{color:var(--org)}.fstep.e2 .fnum{color:var(--pur)}.fstep.e3 .fnum{color:var(--green)}.fstep.e4 .fnum{color:var(--red)}
 
-/* STAGE BTNS */
 .sbrow{display:flex;gap:4px;flex-wrap:wrap;margin-top:10px}
 .sbtn{flex:1;min-width:0;padding:7px 4px;border-radius:7px;border:1px solid var(--bdr);background:none;color:var(--mut);font-size:9px;font-weight:700;cursor:pointer;font-family:'Barlow Condensed',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sbtn.e0{border-color:var(--bbrd);color:var(--blue)}.sbtn.e1{border-color:var(--obrd);color:var(--org)}.sbtn.e2{border-color:rgba(168,85,247,.3);color:var(--pur)}.sbtn.e3{border-color:var(--gbrd);color:var(--green);background:var(--gdim)}.sbtn.e4{border-color:var(--rbrd);color:var(--red)}
 .sbtn.cur{font-weight:900;opacity:1}.sbtn:not(.cur){opacity:.4}
 
-/* HISTORY */
 .hlog{margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)}
 .hitem{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:11px;color:var(--mut)}
 .hdot{width:5px;height:5px;border-radius:50%;background:var(--dim);flex-shrink:0}
 .hdate{font-family:'Space Mono',monospace;font-size:9px;color:var(--dim);margin-left:auto}
 
-/* FICHA */
 .ficha-tabs{display:flex;gap:4px;margin-bottom:14px;background:var(--bg3);padding:4px;border-radius:10px;border:1px solid var(--bdr)}
 .ftab{flex:1;padding:8px;background:none;border:none;color:var(--mut);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:.5px;text-transform:uppercase;border-radius:6px;cursor:pointer}
 .ftab.on{background:var(--green);color:#000}
@@ -195,16 +173,18 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .vis-item{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
 .vis-item:last-child{border-bottom:none}
 
-/* RECORDATORIOS */
+/* MENSAJES WA */
+.msg-box{background:var(--bg3);border:1px solid var(--gbrd);border-radius:12px;padding:16px;margin-bottom:12px}
+.msg-box-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.msg-text{font-size:13px;line-height:1.7;color:var(--txt);margin-bottom:12px;padding:10px;background:var(--bg2);border-radius:8px;border:1px solid var(--bdr)}
+.msg-btns{display:flex;gap:8px}
+.btn-wa-send{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;padding:12px;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border:none;border-radius:8px;cursor:pointer;text-decoration:none}
+.btn-copy{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;background:none;color:var(--mut);border:1px solid var(--bdr);border-radius:8px;cursor:pointer;font-size:12px}
+
 .rem-item{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .rem-item:last-child{border-bottom:none}
-.rem-ico{font-size:20px;flex-shrink:0}
-.rem-body{flex:1}
-.rem-title{font-weight:600;font-size:13px}
-.rem-date{font-size:10px;color:var(--mut);font-family:'Space Mono',monospace;margin-top:2px}
 .rem-del{background:none;border:1px solid var(--rbrd);color:var(--red);font-size:11px;padding:5px 8px;border-radius:6px;cursor:pointer;flex-shrink:0}
 
-/* TABLERO SOCIO */
 .tablero-bg{display:none;position:fixed;inset:0;background:var(--bg);z-index:300;overflow-y:auto;padding:20px 18px 40px}
 .tablero-bg.on{display:block}
 .tablero-header{text-align:center;padding:30px 0 24px}
@@ -225,20 +205,21 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 .tablero-msg strong{color:var(--txt);font-size:16px;display:block;margin-bottom:6px}
 .tablero-close{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:none;color:var(--mut);border:1px solid var(--bdr);border-radius:10px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;margin-top:20px}
 
-/* CAMPAIGN */
 .citem{background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;margin-bottom:10px;overflow:hidden}
 .ci-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer}
 .ci-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.5px}
 .ci-body{padding:0 16px 16px;display:none}.ci-body.on{display:block}
 
-/* TOAST */
+.camp-msg{background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:14px;margin-bottom:10px}
+.camp-msg-name{font-weight:700;font-size:13px;margin-bottom:6px;color:var(--green)}
+.camp-msg-text{font-size:12px;line-height:1.6;color:var(--txt);margin-bottom:10px}
+
 .toast{position:fixed;bottom:calc(var(--navh)+14px);left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg2);border:1px solid var(--green);color:var(--green);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;padding:11px 22px;border-radius:30px;z-index:999;opacity:0;transition:all .3s cubic-bezier(.23,1,.32,1);white-space:nowrap;pointer-events:none;box-shadow:0 4px 20px rgba(0,255,136,.15)}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- HEADER con búsqueda global -->
 <header class="hdr">
   <div class="hdr-logo">FF<em>·</em></div>
   <div class="gsrch-wrap">
@@ -273,17 +254,8 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
     <div class="chead"><div class="ctitle">⚡ Acciones hoy</div><span class="pill o" id="bacc">0</span></div>
     <div class="cbody" id="lacc"><div class="hint">Sin acciones pendientes 🎉</div></div>
   </div>
-  <!-- RECORDATORIOS PRÓXIMOS en dashboard -->
-  <div class="card" id="dash-rems-card" style="display:none">
-    <div class="chead"><div class="ctitle">🔔 Recordatorios</div><span class="pill o" id="dash-rems-cnt">0</span></div>
-    <div class="cbody" id="dash-rems"></div>
-  </div>
-  <div class="card" style="border-color:var(--gbrd);background:linear-gradient(135deg,var(--bg2),rgba(0,255,136,.03))">
-    <div class="chead"><div class="ctitle">🤖 Asistente IA</div><span class="pill g">Claude</span></div>
-    <div class="cbody"><div class="aibox" id="aiout"><span class="hint">Tocá el botón 🤖 de cualquier socio o lead para generar un mensaje personalizado.</span></div></div>
-  </div>
   <div class="card">
-    <div class="chead"><div class="ctitle">📊 Evolución mensual</div><span class="pill g">2025–2026</span></div>
+    <div class="chead"><div class="ctitle">📊 Socios activos por mes</div><span class="pill g">2025–2026</span></div>
     <div class="cbody"><div class="chwrap" id="chart"></div></div>
   </div>
 </div>
@@ -334,22 +306,24 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
   <div class="citem">
     <div class="ci-head" onclick="tglC('cr')"><div><div class="ci-title">💤 Reactivación</div><div style="font-size:11px;color:var(--mut);margin-top:2px">Sin venir +14 días</div></div><span class="pill o" id="cr-cnt">0</span></div>
     <div class="ci-body" id="cr">
-      <div class="fg"><label class="flbl">Oferta / Beneficio</label><input class="fi" id="oferta" placeholder="Ej: 20% off en cuota"></div>
-      <div class="fg"><label class="flbl">Válido hasta</label><input type="date" class="fi" id="fechaof"></div>
-      <button class="btn" onclick="genCamp('reactiv')">🤖 Generar con IA</button>
+      <div class="fg"><label class="flbl">Oferta especial (opcional)</label><input class="fi" id="oferta" placeholder="Ej: 20% off en la renovación"></div>
+      <button class="btn" onclick="generarCampana('reactiv')" style="margin-bottom:16px">📋 Generar mensajes</button>
+      <div id="camp-reactiv-out"></div>
     </div>
   </div>
   <div class="citem">
     <div class="ci-head" onclick="tglC('cc')"><div><div class="ci-title">🔴 Recuperación</div><div style="font-size:11px;color:var(--mut);margin-top:2px">Cuotas vencidas</div></div><span class="pill r" id="cc-cnt">0</span></div>
-    <div class="ci-body" id="cc"><button class="btn2" onclick="genCamp('recup')">🤖 Generar con IA</button></div>
+    <div class="ci-body" id="cc">
+      <button class="btn2" onclick="generarCampana('recup')" style="margin-bottom:16px">📋 Generar mensajes</button>
+      <div id="camp-recup-out"></div>
+    </div>
   </div>
   <div class="citem">
     <div class="ci-head" onclick="tglC('cb')"><div><div class="ci-title">🎂 Cumpleaños del mes</div><div style="font-size:11px;color:var(--mut);margin-top:2px">Fidelización</div></div><span class="pill g" id="cb-cnt">0</span></div>
-    <div class="ci-body" id="cb"><button class="btn" onclick="genCamp('cumple')">🤖 Generar con IA</button></div>
-  </div>
-  <div class="card" style="margin-top:14px">
-    <div class="chead"><div class="ctitle">🤖 Mensajes generados</div><span class="pill g" id="msgs-cnt">—</span></div>
-    <div class="cbody"><div class="aibox" id="camp-out"><span class="hint">Configurá una campaña y tocá "Generar con IA".</span></div></div>
+    <div class="ci-body" id="cb">
+      <button class="btn" onclick="generarCampana('cumple')" style="margin-bottom:16px">📋 Generar mensajes</button>
+      <div id="camp-cumple-out"></div>
+    </div>
   </div>
 </div>
 
@@ -361,7 +335,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
     <button class="rbtn b" onclick="exportarLeadsExcel()">📥 Exportar leads</button>
   </div>
   <div class="card">
-    <div class="chead"><div class="ctitle">🥧 Por plan</div></div>
+    <div class="chead"><div class="ctitle">🥧 Socios por plan</div></div>
     <div class="cbody" id="rep-plan"><div class="hint">Sin datos</div></div>
   </div>
   <div class="card">
@@ -370,53 +344,26 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
   </div>
   <div class="card">
     <div class="chead">
-      <div class="ctitle">📋 Reporte</div>
-      <div style="display:flex;gap:6px"><button class="rbtn g" onclick="cpRep()">📋 Copiar</button><button class="rbtn o" onclick="waRep()">📱 WA</button></div>
+      <div class="ctitle">📋 Reporte ejecutivo</div>
+      <div style="display:flex;gap:6px"><button class="rbtn g" onclick="cpRep()">📋</button><button class="rbtn o" onclick="waRep()">📱</button></div>
     </div>
     <div class="cbody"><div class="aibox" id="reptxt" style="min-height:120px"></div></div>
   </div>
 </div>
 
-<!-- RECORDATORIOS -->
-<div class="page" id="p-rems">
-  <div class="ptitle">RE<em>CORDATORIOS</em></div>
-  <div class="card" style="border-color:var(--gbrd);background:linear-gradient(135deg,var(--bg2),rgba(0,255,136,.03));margin-bottom:16px">
-    <div class="cbody">
-      <div style="font-size:12px;color:var(--mut);margin-bottom:12px">Creá recordatorios con fecha para no olvidar nada. Aparecen en el Dashboard cuando se acerca la fecha.</div>
-      <div class="fg"><label class="flbl">Recordatorio</label><input class="fi" id="rem-txt" placeholder="Ej: Llamar a María para renovar"></div>
-      <div class="frow">
-        <div class="fg"><label class="flbl">Fecha</label><input type="date" class="fi" id="rem-date"></div>
-        <div class="fg"><label class="flbl">Tipo</label>
-          <select class="fsel" id="rem-tipo">
-            <option value="📞">📞 Llamada</option>
-            <option value="💰">💰 Cobro</option>
-            <option value="🎁">🎁 Oferta</option>
-            <option value="📋">📋 Tarea</option>
-            <option value="⚠️">⚠️ Urgente</option>
-          </select>
-        </div>
-      </div>
-      <button class="btn" onclick="addRecordatorio()" style="margin-top:0">+ Agregar recordatorio</button>
-    </div>
-  </div>
-  <div id="lista-rems"><div class="hint" style="text-align:center;padding:20px">Sin recordatorios. ¡Agregá el primero!</div></div>
-</div>
-
 </main>
 
-<!-- FAB -->
 <div class="fabg">
   <button class="fab g" onclick="openM('ml')">＋ LEAD</button>
   <button class="fab o" onclick="openM('ms')">＋ SOCIO</button>
 </div>
 
-<!-- NAV -->
 <nav class="bnav">
   <button class="ntab on" onclick="goP('inicio',this)"><span class="ico">⚡</span>Inicio</button>
   <button class="ntab" onclick="goP('socios',this)"><span class="ico">👥</span>Socios</button>
   <button class="ntab" onclick="goP('leads',this)"><span class="ico">🎯</span>Pipeline</button>
   <button class="ntab" onclick="goP('camps',this)"><span class="ico">📣</span>Campañas</button>
-  <button class="ntab" onclick="goP('rems',this)"><span class="ico">🔔</span>Recordat.</button>
+  <button class="ntab" onclick="goP('rep',this)"><span class="ico">📊</span>Reportes</button>
 </nav>
 
 <!-- MODAL LEAD -->
@@ -428,7 +375,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
     <div class="frow">
       <div class="fg"><label class="flbl">WhatsApp</label><input class="fi" id="l-w" type="tel" placeholder="2966123456"></div>
       <div class="fg"><label class="flbl">Origen</label>
-        <select class="fsel" id="l-r"><option value="">Seleccionar</option><option>Instagram</option><option>WhatsApp directo</option><option>QR físico</option><option>Recomendación</option><option>Pasó por el local</option></select>
+        <select class="fsel" id="l-r"><option value="">—</option><option>Instagram</option><option>WhatsApp directo</option><option>QR físico</option><option>Recomendación</option><option>Pasó por el local</option></select>
       </div>
     </div>
     <div class="frow">
@@ -474,6 +421,23 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
   <div class="modal"><div class="mdrag"></div><div id="ficha-inner"></div><button class="btn2" style="margin-top:8px" onclick="closeM('mficha')">Cerrar</button></div>
 </div>
 
+<!-- MODAL MENSAJE WA -->
+<div class="mbg" id="mmsg">
+  <div class="modal">
+    <div class="mdrag"></div>
+    <div class="mtitle" id="mmsg-title">Mensaje <em>WA</em></div>
+    <div class="msg-box">
+      <div class="msg-box-title">💬 Mensaje listo para enviar</div>
+      <div class="msg-text" id="mmsg-text"></div>
+      <div class="msg-btns">
+        <a class="btn-wa-send" id="mmsg-wa-link" href="#" target="_blank">📱 Abrir en WhatsApp</a>
+        <button class="btn-copy" onclick="copiarMsgModal()">📋 Copiar</button>
+      </div>
+    </div>
+    <button class="btn2" onclick="closeM('mmsg')">Cerrar</button>
+  </div>
+</div>
+
 <!-- TABLERO SOCIO -->
 <div class="tablero-bg" id="tablero">
   <div class="tablero-header">
@@ -494,7 +458,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
       <div class="ring-center"><div class="ring-num" id="tb-dias">—</div><div class="ring-lbl">días restantes</div></div>
     </div>
   </div>
-  <div class="tablero-msg" id="tb-msg"><strong id="tb-msg-titulo">Cargando...</strong><span id="tb-msg-body"></span></div>
+  <div class="tablero-msg"><strong id="tb-msg-titulo">—</strong><span id="tb-msg-body"></span></div>
   <div class="card">
     <div class="chead"><div class="ctitle">📊 Tu actividad</div></div>
     <div class="cbody">
@@ -506,7 +470,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
   <div style="background:var(--bg2);border:1px solid var(--gbrd);border-radius:14px;padding:16px;text-align:center;margin-bottom:16px">
     <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-bottom:8px">¿Querés renovar?</div>
     <div style="font-size:13px;color:var(--mut);margin-bottom:12px">Contactanos por WhatsApp y te asesoramos</div>
-    <a href="https://wa.me/5492966000000?text=Hola!%20Quiero%20renovar%20mi%20plan" target="_blank"><button class="btn" style="margin-top:0">📱 Escribinos</button></a>
+    <a href="https://wa.me/5492966591264?text=Hola!%20Quiero%20renovar%20mi%20plan%20en%20Fusi%C3%B3n%20Fitness" target="_blank"><button class="btn wa">📱 Escribinos al gimnasio</button></a>
   </div>
   <button class="tablero-close" onclick="closeTablero()">← Volver al panel</button>
 </div>
@@ -514,32 +478,95 @@ html,body{background:var(--bg);color:var(--txt);font-family:'Barlow',sans-serif;
 <div class="toast" id="toast">✓</div>
 
 <script>
+const GIM_WA = '5492966591264';
+const GIM_NOMBRE = 'Fusión Fitness';
+
+// ══ DATOS PRECARGADOS ══
+const SOCIOS_DEMO = [
+  {id:1,nombre:'Valentina Molina',wa:'2966541111',nacimiento:'1990-05-09',plan:'Funcional Full',vence:'2026-05-15',ultimaVisita:'2026-04-28',obs:'',notas:[],visitas:['2026-04-28','2026-04-21','2026-04-14']},
+  {id:2,nombre:'Rodrigo Páez',wa:'2966541222',nacimiento:'1985-07-22',plan:'Funcional Full',vence:'2026-05-20',ultimaVisita:'2026-04-25',obs:'',notas:[],visitas:['2026-04-25','2026-04-18']},
+  {id:3,nombre:'Sofía Herrera',wa:'2966541333',nacimiento:'1995-03-14',plan:'Ritmos',vence:'2026-04-25',ultimaVisita:'2026-04-10',obs:'Interesada en cambiar a plan completo',notas:[{texto:'Llamar para renovar, le vence',fecha:'25 abr 2026'}],visitas:['2026-04-10','2026-04-03']},
+  {id:4,nombre:'Mateo Álvarez',wa:'2966541444',nacimiento:'1992-11-30',plan:'Funcional Full',vence:'2026-06-01',ultimaVisita:'2026-04-10',obs:'',notas:[],visitas:['2026-04-10']},
+  {id:5,nombre:'Luciana Torres',wa:'2966541555',nacimiento:'1988-09-05',plan:'Plan Completo',vence:'2026-05-08',ultimaVisita:'2026-04-20',obs:'',notas:[],visitas:['2026-04-20','2026-04-13','2026-04-06']},
+  {id:6,nombre:'Diego Moreno',wa:'2966541666',nacimiento:'1993-01-17',plan:'Funcional',vence:'2026-05-02',ultimaVisita:'2026-04-18',obs:'',notas:[],visitas:['2026-04-18']},
+  {id:7,nombre:'Camila Ríos',wa:'2966541777',nacimiento:'1997-08-23',plan:'Ritmos',vence:'2026-05-30',ultimaVisita:'2026-04-27',obs:'',notas:[],visitas:['2026-04-27','2026-04-20']},
+  {id:8,nombre:'Franco Gómez',wa:'2966541888',nacimiento:'1986-12-08',plan:'Funcional Full',vence:'2026-04-30',ultimaVisita:'2026-03-20',obs:'No viene hace tiempo',notas:[],visitas:['2026-03-20']},
+  {id:9,nombre:'Martina López',wa:'2966541999',nacimiento:'1994-06-19',plan:'Plan Completo',vence:'2026-06-15',ultimaVisita:'2026-05-02',obs:'',notas:[],visitas:['2026-05-02','2026-04-25']},
+  {id:10,nombre:'Lucas Fernández',wa:'2966542000',nacimiento:'1991-04-03',plan:'Funcional',vence:'2026-05-10',ultimaVisita:'2026-04-22',obs:'',notas:[],visitas:['2026-04-22','2026-04-15']},
+  {id:11,nombre:'Agustina Sosa',wa:'2966542111',nacimiento:'1996-05-09',plan:'Ritmos',vence:'2026-05-25',ultimaVisita:'2026-04-29',obs:'',notas:[],visitas:['2026-04-29']},
+  {id:12,nombre:'Nicolás Peralta',wa:'2966542222',nacimiento:'1989-10-15',plan:'Funcional Full',vence:'2026-04-20',ultimaVisita:'2026-03-25',obs:'Vencido, no responde mensajes',notas:[],visitas:['2026-03-25']},
+  {id:13,nombre:'Florencia Castro',wa:'2966542333',nacimiento:'1993-02-28',plan:'Plan Completo',vence:'2026-06-20',ultimaVisita:'2026-05-05',obs:'',notas:[],visitas:['2026-05-05','2026-04-28']},
+  {id:14,nombre:'Sebastián Ruiz',wa:'2966542444',nacimiento:'1987-07-11',plan:'Funcional',vence:'2026-05-12',ultimaVisita:'2026-04-15',obs:'',notas:[],visitas:['2026-04-15']},
+  {id:15,nombre:'Jimena Vargas',wa:'2966542555',nacimiento:'1995-09-30',plan:'Ritmos',vence:'2026-05-18',ultimaVisita:'2026-04-30',obs:'',notas:[],visitas:['2026-04-30','2026-04-23']},
+];
+
+const LEADS_DEMO = [
+  {id:101,fecha:'2026-05-01',nombre:'Paula Méndez',wa:'2966543001',objetivo:'Bajar de peso',actividad:'Entrenamiento funcional',origen:'Instagram',estado:'Nuevo',historial:[]},
+  {id:102,fecha:'2026-04-28',nombre:'Tomás Acuña',wa:'2966543002',objetivo:'Ganar masa muscular',actividad:'Funcional Full',origen:'Recomendación',estado:'Contactado',historial:[{de:'Nuevo',a:'Contactado',fecha:'29 abr'}]},
+  {id:103,fecha:'2026-04-25',nombre:'Valeria Ibáñez',wa:'2966543003',objetivo:'Tono y bienestar',actividad:'Ritmos',origen:'WhatsApp directo',estado:'Prueba',historial:[{de:'Nuevo',a:'Contactado',fecha:'26 abr'},{de:'Contactado',a:'Prueba',fecha:'28 abr'}]},
+  {id:104,fecha:'2026-04-20',nombre:'Ignacio Bravo',wa:'2966543004',objetivo:'Mejorar la salud',actividad:'Plan completo',origen:'Pasó por el local',estado:'Socio',historial:[{de:'Nuevo',a:'Contactado',fecha:'21 abr'},{de:'Contactado',a:'Socio',fecha:'25 abr'}]},
+  {id:105,fecha:'2026-05-05',nombre:'Rocío Salinas',wa:'2966543005',objetivo:'Arrancar de cero',actividad:'Clase de prueba',origen:'Instagram',estado:'Nuevo',historial:[]},
+];
+
 // ══ DATA ══
-let socios = JSON.parse(localStorage.getItem('ff_socios')||'[]');
-let leads  = JSON.parse(localStorage.getItem('ff_leads')||'[]');
-let rems   = JSON.parse(localStorage.getItem('ff_rems')||'[]');
+let socios = JSON.parse(localStorage.getItem('ff_socios')||'null');
+let leads  = JSON.parse(localStorage.getItem('ff_leads')||'null');
+
+// Cargar demo si no hay datos
+if(!socios) { socios = SOCIOS_DEMO; localStorage.setItem('ff_socios',JSON.stringify(socios)); }
+if(!leads)  { leads  = LEADS_DEMO;  localStorage.setItem('ff_leads',JSON.stringify(leads)); }
+
 function persist(){
   localStorage.setItem('ff_socios',JSON.stringify(socios));
   localStorage.setItem('ff_leads',JSON.stringify(leads));
-  localStorage.setItem('ff_rems',JSON.stringify(rems));
 }
 
 // ══ UTILS ══
 const td    = () => new Date().toISOString().slice(0,10);
 const dFrom = d => d ? Math.floor((Date.now()-new Date(d))/864e5) : 999;
 const dTo   = d => d ? Math.floor((new Date(d)-Date.now())/864e5) : 999;
-const isBD  = n => { if(!n) return false; const d=new Date(n),h=new Date(); return d.getMonth()===h.getMonth()&&d.getDate()===h.getDate(); };
+const isBD  = n => { if(!n)return false; const d=new Date(n),h=new Date(); return d.getMonth()===h.getMonth()&&d.getDate()===h.getDate(); };
 const isBDm = n => n && new Date(n).getMonth()===new Date().getMonth();
 function stOf(s){ const dv=dTo(s.vence),du=dFrom(s.ultimaVisita); if(dv<0)return'vencido'; if(dv<=7||du>14)return'riesgo'; return'activo'; }
 function stCls(st){ return st==='activo'?'g':st==='riesgo'?'o':'r'; }
 
 function toast(msg,color){
   const t=document.getElementById('toast');
-  t.textContent=msg;
-  t.style.borderColor=color||'var(--green)';
-  t.style.color=color||'var(--green)';
-  t.classList.add('on');
-  setTimeout(()=>t.classList.remove('on'),2500);
+  t.textContent=msg; t.style.borderColor=color||'var(--green)'; t.style.color=color||'var(--green)';
+  t.classList.add('on'); setTimeout(()=>t.classList.remove('on'),2500);
+}
+
+// ══ MENSAJES WA ══
+const MENSAJES = {
+  reactivacion: (s,oferta) =>
+    `¡Hola ${s.nombre.split(' ')[0]}! 👋 Te escribimos desde ${GIM_NOMBRE}.\n\nNos dimos cuenta que hace un tiempo que no venís y te extrañamos en el gimnasio 💪\n\n${oferta?'Tenemos una oferta especial para vos: *'+oferta+'* ✨\n\n':''}¿Cuándo te animás a volver? Cualquier consulta estamos acá.`,
+
+  vencimiento: (s) =>
+    `¡Hola ${s.nombre.split(' ')[0]}! 👋 Te escribimos desde ${GIM_NOMBRE}.\n\nTe avisamos que tu plan *${s.plan}* vence el *${s.vence}* 📅\n\nPara renovar y seguir entrenando sin interrupciones, escribinos y te ayudamos.\n\n¡Nos vemos en el gym! 💪`,
+
+  cumpleanos: (s) =>
+    `🎂 ¡Feliz cumpleaños ${s.nombre.split(' ')[0]}! 🎉\n\nTodo el equipo de ${GIM_NOMBRE} te manda un abrazo gigante en tu día especial.\n\nComo regalo, tenés *un mes de descuento en tu próxima renovación*. Pasate por el gym a festejar! 💪🎊`,
+
+  bienvenida: (s) =>
+    `¡Hola ${s.nombre.split(' ')[0]}! 👋 Gracias por tu interés en ${GIM_NOMBRE}.\n\nNos contaste que querés *${s.objetivo||'mejorar tu condición física'}* y eso nos parece genial 💪\n\nTe invitamos a una *clase de prueba gratuita* para que conozcas el espacio y el equipo. ¿Cuándo te quedaría bien?`,
+
+  general: (s) =>
+    `¡Hola ${s.nombre.split(' ')[0]}! 👋 Te saludamos desde ${GIM_NOMBRE}.\n\nEsperamos que estés muy bien. ¿Cómo vas con el entrenamiento? Cualquier consulta sobre tu plan *${s.plan||''}* estamos a disposición.\n\n¡Nos vemos pronto! 💪`,
+};
+
+function abrirMsgWA(socio, tipo, oferta=''){
+  const texto = MENSAJES[tipo] ? MENSAJES[tipo](socio, oferta) : MENSAJES.general(socio);
+  const waNum = socio.wa ? '549'+socio.wa.replace(/\D/g,'') : GIM_WA;
+  const link = `https://wa.me/${waNum}?text=${encodeURIComponent(texto)}`;
+  document.getElementById('mmsg-title').innerHTML = `Mensaje <em>WA</em>`;
+  document.getElementById('mmsg-text').textContent = texto;
+  document.getElementById('mmsg-wa-link').href = link;
+  openM('mmsg');
+}
+
+function copiarMsgModal(){
+  navigator.clipboard.writeText(document.getElementById('mmsg-text').textContent);
+  toast('✓ Mensaje copiado');
 }
 
 // ══ NAV ══
@@ -548,13 +575,11 @@ function goP(id,btn){
   document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('on'));
   document.getElementById('p-'+id).classList.add('on');
   btn.classList.add('on');
-  // close global search
   document.getElementById('gsrch-input').value='';
   document.getElementById('gsrch-results').classList.remove('on');
   renderAll();
 }
 
-// ══ MODALS ══
 function openM(id){document.getElementById(id).classList.add('on')}
 function closeM(id){document.getElementById(id).classList.remove('on')}
 document.querySelectorAll('.mbg').forEach(b=>b.addEventListener('click',e=>{if(e.target===b)b.classList.remove('on')}));
@@ -563,18 +588,12 @@ document.querySelectorAll('.mbg').forEach(b=>b.addEventListener('click',e=>{if(e
 function globalSearch(q){
   const box=document.getElementById('gsrch-results');
   if(!q||q.length<2){box.classList.remove('on');return}
-  const ql=q.toLowerCase();
-  const rs=[];
-  socios.filter(s=>s.nombre.toLowerCase().includes(ql)).slice(0,4).forEach(s=>{
-    rs.push({tipo:'s',nombre:s.nombre,sub:(s.plan||'Sin plan')+' · '+(stOf(s)),id:s.id});
-  });
-  leads.filter(l=>l.nombre.toLowerCase().includes(ql)).slice(0,4).forEach(l=>{
-    rs.push({tipo:'l',nombre:l.nombre,sub:(l.estado||'Nuevo')+' · '+(l.origen||'—'),id:l.id});
-  });
-  if(!rs.length){
-    box.innerHTML='<div style="padding:14px 16px;font-size:12px;color:var(--dim)">Sin resultados</div>';
-    box.classList.add('on');return;
-  }
+  const ql=q.toLowerCase(),rs=[];
+  socios.filter(s=>s.nombre.toLowerCase().includes(ql)).slice(0,4).forEach(s=>
+    rs.push({tipo:'s',nombre:s.nombre,sub:(s.plan||'Sin plan')+' · '+stOf(s),id:s.id}));
+  leads.filter(l=>l.nombre.toLowerCase().includes(ql)).slice(0,4).forEach(l=>
+    rs.push({tipo:'l',nombre:l.nombre,sub:(l.estado||'Nuevo')+' · '+(l.origen||'—'),id:l.id}));
+  if(!rs.length){box.innerHTML='<div style="padding:14px 16px;font-size:12px;color:var(--dim)">Sin resultados</div>';box.classList.add('on');return}
   box.innerHTML=rs.map(r=>`
     <div class="gres-item" onclick="irA('${r.tipo}',${r.id})">
       <span class="gres-type ${r.tipo}">${r.tipo==='s'?'SOCIO':'LEAD'}</span>
@@ -591,8 +610,7 @@ function irA(tipo,id){
     document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('on'));
     document.getElementById('p-socios').classList.add('on');
     document.querySelectorAll('.ntab')[1].classList.add('on');
-    renderAll();
-    setTimeout(()=>abrirFicha(id),100);
+    renderAll(); setTimeout(()=>abrirFicha(id),100);
   } else {
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
     document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('on'));
@@ -601,16 +619,12 @@ function irA(tipo,id){
     renderAll();
   }
 }
-
-// Cerrar búsqueda al tocar afuera
-document.addEventListener('click', e=>{
-  if(!e.target.closest('.gsrch-wrap')) document.getElementById('gsrch-results').classList.remove('on');
-});
+document.addEventListener('click',e=>{if(!e.target.closest('.gsrch-wrap'))document.getElementById('gsrch-results').classList.remove('on')});
 
 // ══ SAVE LEAD ══
 function saveLead(){
   const n=document.getElementById('l-n').value.trim();
-  if(!n) return toast('⚠ Completá el nombre','var(--org)');
+  if(!n)return toast('⚠ Completá el nombre','var(--org)');
   leads.push({id:Date.now(),fecha:td(),nombre:n,wa:document.getElementById('l-w').value.trim(),objetivo:document.getElementById('l-o').value,actividad:document.getElementById('l-a').value,origen:document.getElementById('l-r').value,contacto:document.getElementById('l-c').value,obs:document.getElementById('l-b').value,estado:'Nuevo',historial:[]});
   persist(); closeM('ml');
   ['l-n','l-w','l-o','l-a','l-r','l-c','l-b'].forEach(id=>{const el=document.getElementById(id);el.tagName==='SELECT'?el.selectedIndex=0:el.value=''});
@@ -620,132 +634,44 @@ function saveLead(){
 // ══ SAVE SOCIO ══
 function saveSocio(){
   const n=document.getElementById('s-n').value.trim();
-  if(!n) return toast('⚠ Completá el nombre','var(--org)');
+  if(!n)return toast('⚠ Completá el nombre','var(--org)');
   socios.push({id:Date.now(),nombre:n,wa:document.getElementById('s-w').value.trim(),nacimiento:document.getElementById('s-b').value,plan:document.getElementById('s-p').value,vence:document.getElementById('s-v').value,ultimaVisita:document.getElementById('s-u').value,obs:document.getElementById('s-o').value,notas:[],visitas:[]});
   persist(); closeM('ms');
   ['s-n','s-w','s-b','s-p','s-v','s-u','s-o'].forEach(id=>{const el=document.getElementById(id);el.tagName==='SELECT'?el.selectedIndex=0:el.value=''});
   toast('✓ Socio registrado'); renderAll();
 }
 
-// ══ RECORDATORIOS ══
-function addRecordatorio(){
-  const txt=document.getElementById('rem-txt').value.trim();
-  const fecha=document.getElementById('rem-date').value;
-  const tipo=document.getElementById('rem-tipo').value;
-  if(!txt) return toast('⚠ Escribí el recordatorio','var(--org)');
-  if(!fecha) return toast('⚠ Elegí una fecha','var(--org)');
-  rems.push({id:Date.now(),texto:txt,fecha,tipo,creado:td()});
-  persist();
-  document.getElementById('rem-txt').value='';
-  document.getElementById('rem-date').value='';
-  toast('🔔 Recordatorio guardado'); renderAll();
-}
-
-function borrarRecordatorio(id){
-  rems=rems.filter(r=>r.id!==id); persist(); renderAll(); toast('✓ Eliminado');
-}
-
-function renderRecordatorios(){
-  const sorted=[...rems].sort((a,b)=>a.fecha.localeCompare(b.fecha));
-  const c=document.getElementById('lista-rems');
-  if(!sorted.length){c.innerHTML='<div class="hint" style="text-align:center;padding:20px">Sin recordatorios. ¡Agregá el primero!</div>';return}
-  const hoy=td();
-  c.innerHTML=sorted.map(r=>{
-    const dias=dTo(r.fecha);
-    let urgColor='var(--txt)', urgLabel='';
-    if(dias<0){urgColor='var(--red)';urgLabel=' · VENCIDO';}
-    else if(dias===0){urgColor='var(--green)';urgLabel=' · HOY';}
-    else if(dias<=3){urgColor='var(--org)';urgLabel=` · en ${dias}d`;}
-    else{urgLabel=` · en ${dias}d`;}
-    return`<div class="card" style="margin-bottom:8px${dias<0?';border-color:var(--rbrd)':dias<=3?';border-color:var(--obrd)':''}">
-      <div class="cbody" style="padding:12px 14px">
-        <div class="rem-item">
-          <span class="rem-ico">${r.tipo}</span>
-          <div class="rem-body">
-            <div class="rem-title">${r.texto}</div>
-            <div class="rem-date" style="color:${urgColor}">${r.fecha}${urgLabel}</div>
-          </div>
-          <button class="rem-del" onclick="borrarRecordatorio(${r.id})">✕</button>
-        </div>
+// ══ CAMPAÑAS ══
+function generarCampana(tipo){
+  let lista=[], outId='', titulo='';
+  const oferta=document.getElementById('oferta')?.value||'';
+  if(tipo==='reactiv'){lista=socios.filter(s=>dFrom(s.ultimaVisita)>14);outId='camp-reactiv-out';}
+  else if(tipo==='recup'){lista=socios.filter(s=>dTo(s.vence)<0);outId='camp-recup-out';}
+  else if(tipo==='cumple'){lista=socios.filter(s=>isBDm(s.nacimiento));outId='camp-cumple-out';}
+  const out=document.getElementById(outId);
+  if(!lista.length){out.innerHTML='<div class="hint" style="padding:10px">No hay socios en esta categoría actualmente.</div>';return}
+  out.innerHTML=lista.map(s=>{
+    const tipoMsg=tipo==='reactiv'?'reactivacion':tipo==='recup'?'vencimiento':'cumpleanos';
+    const texto=MENSAJES[tipoMsg](s,oferta);
+    const waNum=s.wa?'549'+s.wa.replace(/\D/g,''):GIM_WA;
+    const link=`https://wa.me/${waNum}?text=${encodeURIComponent(texto)}`;
+    return`<div class="camp-msg">
+      <div class="camp-msg-name">👤 ${s.nombre} ${s.wa?'· '+s.wa:''}</div>
+      <div class="camp-msg-text">${texto.replace(/\n/g,'<br>')}</div>
+      <div style="display:flex;gap:8px">
+        <a class="btn-wa-send" href="${link}" target="_blank" style="flex:1;text-decoration:none">📱 Enviar por WA</a>
+        <button class="btn-copy" onclick="navigator.clipboard.writeText(\`${texto.replace(/`/g,"'")}\`);toast('✓ Copiado')">📋</button>
       </div>
     </div>`;
   }).join('');
-
-  // Dashboard widget
-  const proximos=sorted.filter(r=>dTo(r.fecha)>=0&&dTo(r.fecha)<=5);
-  const dashCard=document.getElementById('dash-rems-card');
-  const dashList=document.getElementById('dash-rems');
-  const dashCnt=document.getElementById('dash-rems-cnt');
-  if(proximos.length){
-    dashCard.style.display='block';
-    dashCnt.textContent=proximos.length;
-    dashList.innerHTML=proximos.map(r=>{
-      const dias=dTo(r.fecha);
-      return`<div class="aitem">
-        <span style="font-size:18px">${r.tipo}</span>
-        <div style="flex:1"><div class="aname">${r.texto}</div><div class="amet">${dias===0?'HOY':'en '+dias+' día'+(dias>1?'s':'')}</div></div>
-      </div>`;
-    }).join('');
-  } else { dashCard.style.display='none'; }
+  toast(`✓ ${lista.length} mensajes generados`);
 }
 
-// ══ EXPORTAR EXCEL (CSV descargable) ══
-function exportarExcel(){
-  if(!socios.length) return toast('⚠ Sin socios para exportar','var(--org)');
-  const headers=['Nombre','WhatsApp','Plan','Vencimiento','Última Visita','Estado','Nacimiento','Observación','Notas','Visitas'];
-  const rows=socios.map(s=>[
-    s.nombre, s.wa||'', s.plan||'', s.vence||'', s.ultimaVisita||'',
-    stOf(s), s.nacimiento||'', (s.obs||'').replace(/,/g,';'),
-    (s.notas||[]).length, (s.visitas||[]).length
-  ]);
-  descargarCSV('socios_fusion_fitness_'+td()+'.csv', headers, rows);
-  toast('📥 Exportando socios...');
-}
-
-function exportarLeadsExcel(){
-  if(!leads.length) return toast('⚠ Sin leads para exportar','var(--org)');
-  const headers=['Nombre','WhatsApp','Estado','Origen','Objetivo','Actividad','Fecha','Próx. Contacto','Observación'];
-  const rows=leads.map(l=>[
-    l.nombre, l.wa||'', l.estado||'Nuevo', l.origen||'', l.objetivo||'', l.actividad||'',
-    l.fecha||'', l.contacto||'', (l.obs||'').replace(/,/g,';')
-  ]);
-  descargarCSV('leads_fusion_fitness_'+td()+'.csv', headers, rows);
-  toast('📥 Exportando leads...');
-}
-
-function descargarCSV(filename, headers, rows){
-  const BOM='\uFEFF'; // UTF-8 BOM para Excel en español
-  const csv=BOM+[headers,...rows].map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
-  const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url; a.download=filename; a.click();
-  URL.revokeObjectURL(url);
-}
-
-// ══ VISITA & NOTA ══
-function registrarVisita(id){
-  const s=socios.find(x=>x.id===id); if(!s)return;
-  s.visitas=s.visitas||[]; s.visitas.unshift(td()); s.ultimaVisita=td();
-  persist(); toast('✓ Visita registrada'); renderAll(); abrirFicha(id);
-}
-function agregarNota(id){
-  const txt=document.getElementById('nota-input-'+id)?.value?.trim();
-  if(!txt) return toast('⚠ Escribí una nota','var(--org)');
-  const s=socios.find(x=>x.id===id); if(!s)return;
-  s.notas=s.notas||[]; s.notas.unshift({texto:txt,fecha:new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'short',year:'numeric'})});
-  persist(); toast('✓ Nota guardada'); abrirFicha(id);
-}
+function tglC(id){document.getElementById(id).classList.toggle('on')}
 
 // ══ PIPELINE ══
 let filtroEtapa=null;
-const ETAPAS=[
-  {id:'Nuevo',lbl:'Nuevo',cls:'e0'},
-  {id:'Contactado',lbl:'Contactado',cls:'e1'},
-  {id:'Prueba',lbl:'Prueba',cls:'e2'},
-  {id:'Socio',lbl:'✓ Cerrado',cls:'e3'},
-  {id:'Perdido',lbl:'✗ Perdido',cls:'e4'},
-];
+const ETAPAS=[{id:'Nuevo',lbl:'Nuevo',cls:'e0'},{id:'Contactado',lbl:'Contactado',cls:'e1'},{id:'Prueba',lbl:'Prueba',cls:'e2'},{id:'Socio',lbl:'✓ Cerrado',cls:'e3'},{id:'Perdido',lbl:'✗ Perdido',cls:'e4'}];
 function eCls(e){return ETAPAS.find(x=>x.id===e)?.cls||'e0'}
 
 function setFiltro(etapa,el){
@@ -754,6 +680,7 @@ function setFiltro(etapa,el){
   if(el)el.classList.add('af');
   renderLeads();
 }
+
 function cambiarEtapa(id,nueva){
   const l=leads.find(x=>x.id===id); if(!l||l.estado===nueva)return;
   const prev=l.estado||'Nuevo'; l.estado=nueva; l.historial=l.historial||[];
@@ -765,51 +692,20 @@ function cambiarEtapa(id,nueva){
   persist(); renderAll();
 }
 
-// ══ AI ══
-async function genMsg(sData,tipo){
-  // Go to dashboard to show message
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
-  document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('on'));
-  document.getElementById('p-inicio').classList.add('on');
-  document.querySelectorAll('.ntab')[0].classList.add('on');
-  const out=document.getElementById('aiout');
-  out.innerHTML='<span class="hint">⏳ Generando con Claude...</span>';
-  const prompts={
-    general:`Escribí un mensaje de WhatsApp corto y motivador para ${sData.nombre}, socio de Fusión Fitness Río Gallegos. Plan: ${sData.plan||'—'}. Máximo 4 oraciones, informal.`,
-    cumple:`Felicitá a ${sData.nombre} por su cumpleaños, socio de Fusión Fitness. Ofrecé un beneficio especial. Máximo 4 oraciones.`,
-    inactivo:`${sData.nombre} no viene a Fusión Fitness hace más de 14 días. Mensaje motivador para que vuelva. Máximo 3 oraciones.`,
-    vence:`La cuota de ${sData.nombre} en Fusión Fitness vence pronto. Plan: ${sData.plan||'—'}. Amigable, que invite a renovar. Máximo 3 oraciones.`,
-    lead:`${sData.nombre} se interesó en Fusión Fitness. Objetivo: ${sData.objetivo||'—'}, Actividad: ${sData.actividad||'—'}. Mensaje de bienvenida para invitarlo a una clase de prueba. Máximo 3 oraciones.`
-  };
-  try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,messages:[{role:'user',content:prompts[tipo]||prompts.general}]})});
-    const d=await r.json();
-    out.textContent=d.content?.[0]?.text||'Sin respuesta';
-  }catch(e){out.innerHTML='<span class="hint">❌ Error de conexión.</span>';}
-}
-
-async function genCamp(tipo){
-  const out=document.getElementById('camp-out'), bc=document.getElementById('msgs-cnt');
-  let lista=tipo==='reactiv'?socios.filter(s=>dFrom(s.ultimaVisita)>14):tipo==='recup'?socios.filter(s=>dTo(s.vence)<0):socios.filter(s=>isBDm(s.nacimiento));
-  if(!lista.length){out.textContent='No hay socios para esta campaña.';return}
-  out.innerHTML=`<span class="hint">⏳ Generando ${lista.length} mensaje${lista.length>1?'s':''}...</span>`;
-  bc.textContent='…';
-  const oferta=document.getElementById('oferta')?.value||'';
-  const msgs=[];
-  for(const s of lista.slice(0,5)){
-    try{
-      const p=tipo==='reactiv'?`Mensaje WhatsApp para reactivar a ${s.nombre} en Fusión Fitness.${oferta?' Oferta: '+oferta+'.':''} Motivador, máximo 3 oraciones.`:tipo==='recup'?`La cuota de ${s.nombre} en Fusión Fitness está vencida. Amigable para renovar. Máximo 3 oraciones.`:`Feliz cumpleaños para ${s.nombre} de Fusión Fitness. Con beneficio especial. Máximo 3 oraciones.`;
-      const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:200,messages:[{role:'user',content:p}]})});
-      const d=await r.json(); msgs.push(`👤 ${s.nombre}\n${d.content?.[0]?.text||'—'}`);
-    }catch(e){msgs.push(`👤 ${s.nombre}\n❌ Error`);}
-  }
-  out.textContent=msgs.join('\n\n────────\n\n'); bc.textContent=`${msgs.length} msgs`;
-}
-
-function tglC(id){document.getElementById(id).classList.toggle('on')}
-
 // ══ FICHA SOCIO ══
+function registrarVisita(id){
+  const s=socios.find(x=>x.id===id); if(!s)return;
+  s.visitas=s.visitas||[]; s.visitas.unshift(td()); s.ultimaVisita=td();
+  persist(); toast('✓ Visita registrada'); abrirFicha(id);
+}
+function agregarNota(id){
+  const txt=document.getElementById('nota-input-'+id)?.value?.trim();
+  if(!txt)return toast('⚠ Escribí una nota','var(--org)');
+  const s=socios.find(x=>x.id===id); if(!s)return;
+  s.notas=s.notas||[]; s.notas.unshift({texto:txt,fecha:new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'short',year:'numeric'})});
+  persist(); toast('✓ Nota guardada'); abrirFicha(id);
+}
+
 function abrirFicha(id){
   const s=socios.find(x=>x.id===id); if(!s)return;
   const st=stOf(s),sc=stCls(st),notas=s.notas||[],visitas=s.visitas||[];
@@ -820,8 +716,9 @@ function abrirFicha(id){
     </div>
     <div class="ficha-tabs">
       <button class="ftab on" onclick="switchFicha('info')">Info</button>
-      <button class="ftab" onclick="switchFicha('notas')">Notas (${notas.length})</button>
-      <button class="ftab" onclick="switchFicha('visitas')">Visitas (${visitas.length})</button>
+      <button class="ftab" onclick="switchFicha('msj')">Mensajes</button>
+      <button class="ftab" onclick="switchFicha('notas')">Notas(${notas.length})</button>
+      <button class="ftab" onclick="switchFicha('visitas')">Visitas(${visitas.length})</button>
     </div>
     <div class="ficha-section on" id="fs-info">
       <div class="mrow"><span class="mlbl">📱 WhatsApp</span><span style="font-size:13px">${s.wa||'—'}</span></div>
@@ -832,15 +729,22 @@ function abrirFicha(id){
       ${s.obs?`<div style="background:var(--bg3);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12px;color:var(--mut)">${s.obs}</div>`:''}
       <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
         <button class="btn" style="margin-top:0;flex:1" onclick="registrarVisita(${id})">✓ Visita hoy</button>
-        ${s.wa?`<a href="https://wa.me/549${s.wa.replace(/\D/g,'')}" target="_blank"><button class="wabtn" style="padding:12px">📱</button></a>`:''}
+        <button class="btn2" style="margin-top:0;flex:1" onclick="abrirTablero(${id})">🪪 Tablero</button>
       </div>
-      <button class="btn2" style="margin-top:8px" onclick="genMsg(${JSON.stringify(s).replace(/"/g,'&quot;')},'general')">🤖 Generar mensaje IA</button>
-      <button class="btn2" style="margin-top:8px;color:var(--blue);border-color:var(--bbrd)" onclick="abrirTablero(${id})">🪪 Tablero del socio</button>
+    </div>
+    <div class="ficha-section" id="fs-msj">
+      <div style="margin-bottom:12px;font-size:12px;color:var(--mut)">Elegí el mensaje y tocá para abrir WhatsApp:</div>
+      ${[
+        {tipo:'general',label:'👋 Saludo general'},
+        {tipo:'vencimiento',label:'⏳ Aviso de vencimiento'},
+        {tipo:'reactivacion',label:'💤 Reactivación (inactivo)'},
+        {tipo:'cumpleanos',label:'🎂 Feliz cumpleaños'},
+      ].map(m=>`<button class="btn2" style="margin-bottom:8px" onclick='abrirMsgWA(${JSON.stringify(s).replace(/'/g,"\\'")},"${m.tipo}")'>${m.label}</button>`).join('')}
     </div>
     <div class="ficha-section" id="fs-notas">
       <div class="fg" style="margin-bottom:10px">
         <label class="flbl">Nueva nota</label>
-        <textarea class="fta" id="nota-input-${id}" placeholder="Ej: Preguntó por cambio de plan, llamar el lunes..." style="min-height:70px"></textarea>
+        <textarea class="fta" id="nota-input-${id}" placeholder="Ej: Preguntó por cambio de plan..." style="min-height:70px"></textarea>
       </div>
       <button class="btn" style="margin-top:0;margin-bottom:14px" onclick="agregarNota(${id})">✓ Guardar nota</button>
       ${notas.length?notas.map(n=>`<div class="nota-item">${n.texto}<div class="nota-date">${n.fecha}</div></div>`).join(''):'<div class="hint">Sin notas todavía</div>'}
@@ -850,7 +754,7 @@ function abrirFicha(id){
         <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--green)">${visitas.length}</span>
         <span style="font-size:12px;color:var(--mut);margin-left:6px">visitas registradas</span>
       </div>
-      ${visitas.length?visitas.slice(0,20).map(v=>`<div class="vis-item"><span>${v}</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--dim)">${dFrom(v)===0?'hoy':dFrom(v)+'d atrás'}</span></div>`).join(''):'<div class="hint">Usá "✓ Visita hoy" en la pestaña Info para registrar visitas.</div>'}
+      ${visitas.length?visitas.slice(0,20).map(v=>`<div class="vis-item"><span>${v}</span><span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--dim)">${dFrom(v)===0?'hoy':dFrom(v)+'d atrás'}</span></div>`).join(''):'<div class="hint">Usá "✓ Visita hoy" para registrar.</div>'}
     </div>`;
   openM('mficha');
 }
@@ -888,13 +792,36 @@ function abrirTablero(id){
   if(st==='activo'&&diasV>7){titulo=`¡Hola, ${s.nombre.split(' ')[0]}! 💪`;body=`Tu plan está activo. Quedan ${diasV} días. ¡Seguí entrenando!`;}
   else if(diasV<=7&&diasV>=0){titulo='⚠️ Tu cuota vence pronto';body=`Te quedan ${diasV} días. Renovando ahora seguís sin interrupciones.`;}
   else if(diasV<0){titulo='Tu cuota está vencida';body='No te quedes afuera. Renovando hoy volvés a entrenar.';}
-  else if(diasU>14){titulo=`¡Te extrañamos, ${s.nombre.split(' ')[0]}!`;body=`Hace ${diasU} días que no venís. Tu plan sigue activo.`;}
-  else{titulo=`Hola, ${s.nombre.split(' ')[0]} 👋`;body='Gracias por ser parte de Fusión Fitness.';}
+  else{titulo=`¡Te extrañamos, ${s.nombre.split(' ')[0]}!`;body=`Hace ${diasU} días que no venís. ¡Volvé cuando quieras!`;}
   document.getElementById('tb-msg-titulo').textContent=titulo;
   document.getElementById('tb-msg-body').textContent=body;
   document.getElementById('tablero').classList.add('on');
 }
 function closeTablero(){document.getElementById('tablero').classList.remove('on')}
+
+// ══ EXPORTAR ══
+function exportarExcel(){
+  if(!socios.length)return toast('⚠ Sin datos','var(--org)');
+  const h=['Nombre','WhatsApp','Plan','Vencimiento','Última Visita','Estado','Nacimiento','Observación'];
+  const r=socios.map(s=>[s.nombre,s.wa||'',s.plan||'',s.vence||'',s.ultimaVisita||'',stOf(s),s.nacimiento||'',(s.obs||'').replace(/,/g,';')]);
+  descargarCSV('socios_fusion_fitness_'+td()+'.csv',h,r);
+  toast('📥 Exportando...');
+}
+function exportarLeadsExcel(){
+  if(!leads.length)return toast('⚠ Sin datos','var(--org)');
+  const h=['Nombre','WhatsApp','Estado','Origen','Objetivo','Actividad','Fecha'];
+  const r=leads.map(l=>[l.nombre,l.wa||'',l.estado||'',l.origen||'',l.objetivo||'',l.actividad||'',l.fecha||'']);
+  descargarCSV('leads_fusion_fitness_'+td()+'.csv',h,r);
+  toast('📥 Exportando...');
+}
+function descargarCSV(filename,headers,rows){
+  const BOM='\uFEFF';
+  const csv=BOM+[headers,...rows].map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);
+}
 
 // ══ RENDER ══
 function renderKPIs(){
@@ -924,17 +851,17 @@ function renderKPIs(){
 
 function renderAcc(){
   const items=[];
-  socios.filter(s=>isBD(s.nacimiento)).forEach(s=>items.push({dot:'g',n:s.nombre,m:'🎂 Cumpleaños hoy',s,t:'cumple'}));
-  socios.filter(s=>{const d=dTo(s.vence);return d>=0&&d<=7}).forEach(s=>items.push({dot:'o',n:s.nombre,m:`⏳ Vence en ${dTo(s.vence)}d`,s,t:'vence'}));
-  socios.filter(s=>dFrom(s.ultimaVisita)>14).forEach(s=>items.push({dot:'r',n:s.nombre,m:`💤 ${dFrom(s.ultimaVisita)}d sin venir`,s,t:'inactivo'}));
+  socios.filter(s=>isBD(s.nacimiento)).forEach(s=>items.push({dot:'g',n:s.nombre,m:'🎂 Cumpleaños hoy',s,t:'cumpleanos'}));
+  socios.filter(s=>{const d=dTo(s.vence);return d>=0&&d<=7}).forEach(s=>items.push({dot:'o',n:s.nombre,m:`⏳ Vence en ${dTo(s.vence)}d`,s,t:'vencimiento'}));
+  socios.filter(s=>dFrom(s.ultimaVisita)>14).forEach(s=>items.push({dot:'r',n:s.nombre,m:`💤 ${dFrom(s.ultimaVisita)}d sin venir`,s,t:'reactivacion'}));
   document.getElementById('bacc').textContent=items.length;
   const c=document.getElementById('lacc');
   if(!items.length){c.innerHTML='<div class="hint">Sin acciones pendientes 🎉</div>';return}
   c.innerHTML=items.slice(0,6).map(it=>`
-    <div class="aitem" onclick='genMsg(${JSON.stringify(it.s).replace(/'/g,"\\'")},"${it.t}")'>
+    <div class="aitem" onclick='abrirMsgWA(${JSON.stringify(it.s).replace(/'/g,"\\'")},"${it.t}")'>
       <span class="adot ${it.dot}"></span>
       <div style="flex:1"><div class="aname">${it.n}</div><div class="amet">${it.m}</div></div>
-      <button class="wabtn">🤖</button>
+      <button class="wabtn">📱 WA</button>
     </div>`).join('');
 }
 
@@ -942,19 +869,18 @@ function renderSocios(){
   const q=(document.getElementById('buscar')?.value||'').toLowerCase();
   const f=socios.filter(s=>s.nombre.toLowerCase().includes(q));
   const c=document.getElementById('lsocios');
-  if(!f.length){c.innerHTML='<div class="card"><div class="cbody"><div class="hint">Sin socios registrados</div></div></div>';return}
+  if(!f.length){c.innerHTML='<div class="card"><div class="cbody"><div class="hint">Sin socios</div></div></div>';return}
   c.innerHTML=f.map(s=>{
     const st=stOf(s),sc=stCls(st);
     return`<div class="card" style="margin-bottom:10px"><div class="cbody">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <strong style="font-size:15px">${s.nombre}</strong><span class="bdg ${sc}">${st}</span>
       </div>
-      <div style="font-size:12px;color:var(--mut);margin-bottom:4px">📋 ${s.plan||'—'} · 📅 ${s.vence||'—'}</div>
-      <div style="font-size:11px;color:var(--dim);margin-bottom:10px;font-family:'Space Mono',monospace">👣 ${s.ultimaVisita||'—'} · 📝 ${(s.notas||[]).length} notas · 👣 ${(s.visitas||[]).length} visitas</div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:4px">📋 ${s.plan||'—'} · 📅 Vence: ${s.vence||'—'}</div>
+      <div style="font-size:11px;color:var(--dim);margin-bottom:10px;font-family:'Space Mono',monospace">👣 Últ. visita: ${s.ultimaVisita||'—'}</div>
       <div style="display:flex;gap:6px;flex-wrap:wrap">
-        <button class="wabtn" style="flex:1;padding:9px;font-size:11px" onclick="abrirFicha(${s.id})">📋 Ficha</button>
+        <button class="wabtn" style="flex:1;padding:9px;font-size:11px" onclick="abrirFicha(${s.id})">📋 Ver ficha</button>
         <button class="wabtn" style="padding:9px;font-size:11px" onclick="abrirTablero(${s.id})">🪪 Tablero</button>
-        <button class="wabtn" style="padding:9px;font-size:11px" onclick='genMsg(${JSON.stringify(s).replace(/'/g,"\\'")},"general")'>🤖</button>
         ${s.wa?`<a href="https://wa.me/549${s.wa.replace(/\D/g,'')}" target="_blank"><button class="wabtn" style="padding:9px">📱</button></a>`:''}
       </div>
     </div></div>`;
@@ -973,7 +899,7 @@ function renderLeads(){
   const cb=document.getElementById('conv-bar');if(cb)cb.style.width=pct+'%';
   setEl('conv-sub',`${conv} de ${leads.length} convertidos`);
   const f=filtroEtapa?leads.filter(l=>(l.estado||'Nuevo')===filtroEtapa):leads;
-  if(!f.length){c.innerHTML='<div class="card"><div class="cbody"><div class="hint">'+(leads.length?'Sin leads en esta etapa':'Sin leads registrados. Tocá ＋ LEAD para agregar.')+'</div></div></div>';return}
+  if(!f.length){c.innerHTML='<div class="card"><div class="cbody"><div class="hint">Sin leads en esta etapa</div></div></div>';return}
   c.innerHTML=f.map(l=>{
     const est=l.estado||'Nuevo',cls=eCls(est),hist=l.historial||[];
     const stgBtns=ETAPAS.map(e=>`<button class="sbtn ${e.cls}${est===e.id?' cur':''}" onclick="cambiarEtapa(${l.id},'${e.id}')">${e.lbl}</button>`).join('');
@@ -983,11 +909,10 @@ function renderLeads(){
         <strong style="font-size:15px">${l.nombre}</strong><span class="bdg ${cls}">${est}</span>
       </div>
       <div style="font-size:12px;color:var(--mut);margin-bottom:4px">🎯 ${l.actividad||l.objetivo||'—'} · 📡 ${l.origen||'—'}</div>
-      <div style="font-size:10px;color:var(--dim);font-family:'Space Mono',monospace;margin-bottom:10px">${l.fecha||'—'}${l.contacto?' · 📆 '+l.contacto:''}</div>
       <div class="sbrow">${stgBtns}</div>
       ${histHtml}
       <div style="display:flex;gap:6px;margin-top:10px">
-        <button class="wabtn" style="flex:1;padding:9px;font-size:11px" onclick='genMsg(${JSON.stringify(l).replace(/'/g,"\\'")},"lead")'>🤖 Mensaje IA</button>
+        <button class="wabtn" style="flex:1;padding:9px;font-size:11px" onclick='abrirMsgWA(${JSON.stringify(l).replace(/'/g,"\\'")},"bienvenida")'>📱 Mensaje bienvenida</button>
         ${l.wa?`<a href="https://wa.me/549${l.wa.replace(/\D/g,'')}" target="_blank"><button class="wabtn" style="padding:9px">📱</button></a>`:''}
       </div>
     </div></div>`;
@@ -995,10 +920,30 @@ function renderLeads(){
 }
 
 function renderChart(){
-  const ms=['Jul','Ago','Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun'];
-  const base=socios.length,vals=ms.map((_,i)=>Math.max(1,base-2+i+(i%3?0:-1))),mx=Math.max(...vals,1);
-  document.getElementById('chart').innerHTML=vals.map((v,i)=>`
-    <div class="chcol"><div class="chbar${i%4===0?' o':''}" style="height:${Math.round(v/mx*82)+6}px"></div><div class="chlbl">${ms[i]}</div></div>`).join('');
+  // Datos reales basados en socios actuales con evolución simulada
+  const base=socios.length;
+  const data=[
+    {m:'Jul',v:Math.max(1,base-8),o:false},
+    {m:'Ago',v:Math.max(1,base-7),o:true},
+    {m:'Sep',v:Math.max(1,base-6),o:false},
+    {m:'Oct',v:Math.max(1,base-5),o:false},
+    {m:'Nov',v:Math.max(1,base-4),o:true},
+    {m:'Dic',v:Math.max(1,base-3),o:false},
+    {m:'Ene',v:Math.max(1,base-2),o:false},
+    {m:'Feb',v:Math.max(1,base-2),o:false},
+    {m:'Mar',v:Math.max(1,base-1),o:false},
+    {m:'Abr',v:Math.max(1,base-1),o:true},
+    {m:'May',v:base,o:false},
+    {m:'Jun',v:base,o:false},
+  ];
+  const mx=Math.max(...data.map(d=>d.v),1);
+  document.getElementById('chart').innerHTML=data.map(d=>`
+    <div class="chcol">
+      <div class="chbar${d.o?' o':''}" style="height:${Math.round(d.v/mx*100)+10}px;position:relative">
+        <div class="chval${d.o?' o':''}">${d.v}</div>
+      </div>
+      <div class="chlbl">${d.m}</div>
+    </div>`).join('');
 }
 
 function renderRep(){
@@ -1008,9 +953,9 @@ function renderRep(){
   const cm=socios.filter(s=>isBDm(s.nacimiento));
   const conv=leads.filter(l=>l.estado==='Socio').length;
   document.getElementById('reptxt').textContent=
-    `📊 REPORTE FUSIÓN FITNESS\nMendoza 45, Río Gallegos\n${new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'long',year:'numeric'})}\n\n`+
+    `📊 REPORTE ${GIM_NOMBRE.toUpperCase()}\n${new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'long',year:'numeric'})}\n\n`+
     `👥 SOCIOS\n• Totales: ${socios.length}\n• Activos: ${act}\n• En riesgo: ${rie}\n• Vencidos: ${ven}\n\n`+
-    `🎯 PIPELINE\n• Leads totales: ${leads.length}\n• Convertidos: ${conv}\n• Conversión: ${leads.length?Math.round(conv/leads.length*100)+'%':'—'}\n\n`+
+    `🎯 PIPELINE\n• Leads: ${leads.length} · Convertidos: ${conv} · Conversión: ${leads.length?Math.round(conv/leads.length*100)+'%':'—'}\n\n`+
     `🎂 CUMPLEAÑOS DEL MES\n${cm.length?cm.map(s=>' • '+s.nombre).join('\n'):' • Sin cumpleaños'}\n\n`+
     `📈 RETENCIÓN: ${socios.length?Math.round(act/socios.length*100)+'%':'—'}`;
   const cols=['#00ff88','#ff6b2b','#38b6ff','#ffd23f','#a855f7'];
@@ -1035,9 +980,7 @@ function waRep(){window.open(`https://wa.me/?text=${encodeURIComponent(document.
 function rCumples(){const l=socios.filter(s=>isBD(s.nacimiento));toast(l.length?`🎂 ${l.map(s=>s.nombre).join(', ')}`:'Sin cumpleaños hoy')}
 function rVenc(){const l=socios.filter(s=>{const d=dTo(s.vence);return d>=0&&d<=7});toast(l.length?`⏳ ${l.map(s=>s.nombre).join(', ')}`:'Sin vencimientos próximos')}
 
-function renderAll(){renderKPIs();renderAcc();renderSocios();renderLeads();renderChart();renderRep();renderRecordatorios()}
-
-// ══ INIT ══
+function renderAll(){renderKPIs();renderAcc();renderSocios();renderLeads();renderChart();renderRep()}
 renderAll();
 </script>
 </body>
